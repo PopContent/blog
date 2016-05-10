@@ -15,11 +15,11 @@
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#header" class="smooth-scroll">Home</a></li>
-                <li><a href="<%= params[:controller] == 'blog' ? '/#e-book' : '#e-book' %>" 
+                <li><a href="<%= params[:controller] != 'static_pages' ? root_path(anchor: 'e-book') : '#e-book' %>" 
                        class="smooth-scroll">E-book</a></li>
-                <li><a href="<%= params[:controller] == 'blog' ? '/#whats-app' : '#whats-app' %>" 
+                <li><a href="<%= params[:controller] != 'static_pages' ? root_path(anchor: 'whats-app') : '#whats-app' %>" 
                        class="smooth-scroll">WhatsApp</a></li>
-                <li><a href="<%= params[:controller] == 'blog' ? '/#features' : '#features' %>" 
+                <li><a href="<%= params[:controller] != 'static_pages' ? root_path(anchor: 'features') : '#features' %>" 
                        class="smooth-scroll">O Time</a></li>
                 <li><%= link_to 'Blog', blog_path%></li>
             </ul>
