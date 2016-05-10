@@ -22,4 +22,4 @@
 //= require waypoints.min.js
 //= require jquery.counterup.min.js
 //= require sweetalert.min.js
-//=require_tree .
+//= require analytics.coffee
