@@ -1,128 +1,12 @@
 Post.create(
-  title: 'Quatro dicas  essenciais para conseguir novos clientes',
-  content: '
-  Você tem um pequeno negócio e quer encontrar uma forma para conquistar mais clientes?
-  Investir no marketing pode ser uma solução rápida e  muito mais prática do que você
-  imagina. Mas por onde começar? Primeiro, tire da sua cabeça a ideia de que marketing é
-  somente fazer anúncios em jornais, revistas, televisão ou entregar panfletos. O marketing
-  envolve muitos fatores que são essenciais para aumentar suas vendas, como criar o perfil
-  do cliente, manter um bom relacionamento com ele, entender quais as melhores formas
-  para tornar sua empresa mais conhecida, entre várias outras coisas. Dentro disso tudo está
-  também o marketing pela internet. Através dele o seu negócio pode ganhar uma visibilidade
-  muito maior, utilizando recursos gratuitos e que atingirão mais pessoas.  Quer aprender
-  como? Confira o nosso post.
-
-
-  1 ­ Conheça o perfil dos seus clientes
-
-  Para quem você vende? Essa é uma pergunta essencial para identificar o seu público e
-  criar estratégias que falem diretamente com ele.  Ao saber para quem você deve direcionar
-  a sua mensagem fica muito mais fácil descobrir qual linguagem usar e quais meios são
-  mais eficazes para manter um bom relacionamento. Por exemplo,  identificar se ele é uma
-  pessoa que usa muito a internet e está sempre nas redes sociais ou se é um leitor assíduo
-  de jornais. Esse mapeamento também vale para as ações de vendas, e vai te ajudar na
-  hora de analisar quais tipos de promoções fazer ou se vale a pena investir em vendas
-  online.
-
-  Com o perfil em mãos é hora de pensar em inserir valores para a sua marca que reflitam a
-  personalidade do seu público, gerando credibilidade, fidelização e até mesmo uma  relação
-  afetiva com a empresa.  Para conhecer o seu público é importante que você faça uma
-  pesquisa focando em dados como a idade, sexo, profissão, estado civil, onde mora, entre
-  outros.
-
-  No marketing nós utilizamos um termo  que é denominado persona. Nós aplicamos os
-  dados obtidos  para criar o que seria um cliente imaginário que representa  a maioria do
-  nosso público, isso é a persona. Na hora de  pensar em melhorias para o produto,
-  inovações, propaganda, formas de conversar com ele você terá sempre em mente essa
-  persona e  poderá se perguntar “ o que a agradaria mais?”.
-  Por exemplo, a dona de  uma loja de roupas  recolheu informações do seu público e
-  constatou que a maioria das vendas é realizada para mulheres entre 20 e 25 anos,
-  universitárias e que usam muito o Facebook e o Instagram para encontrarem referências de
-  moda. A partir disso ela cria uma persona, a Carolina, de 22 anos, universitária e que está
-  sempre antenada nas redes sociais.
-
-  Quais seriam as formas de falar com a Carolina? A empresária entende que ela precisa
-  estar presente nas redes sociais, cria uma página no Facebook e um perfil no Instagram,
-  pois nesses lugares que ela vai encontrar oportunidades para criar mais vendas. E aí? Viu
-  como identificar o seu público pode ser útil?
-
-
-  2­  Promova um bom relacionamento com o seu cliente
-
-  Com o foco de aumentar as vendas, muitas empresas pensam somente em como chamar
-  novos compradores e se esquecem da importância de manter um relacionamento bom com
-  os clientes que ela já tem. Esse relacionamento não deve ser deixado de lado nunca. Pense
-  o seguinte: você quer que a pessoa compre o seu produto e não volte mais ou que ela
-  mantenha um relacionamento duradouro com a empresa? Não tenho nem dúvidas de que é
-  a segunda opção. Para desenvolver esse relacionamento é necessário criar estratégias  de
-  marketing e vendas voltadas para um atendimento personalizado e atencioso.
-
-  O seu vendedor deve se preocupar em entender quais são as necessidades do cliente e de
-  que forma seu produto irá solucionar o problema dele. Pense nos valores que você quer
-  transmitir.  Você pode estabelecer algumas ações como:  passar o telefone  da empresa
-  para que o cliente possa ligar no caso de dúvidas,  fazer um cartão de fidelização onde ele
-  terá descontos nas próximas compras,  criar uma página no Facebook para que eles
-  deixem seus comentários, entre outros.
-
-
-  3­ Marketing boca a boca
-
-  Andando juntinho com o relacionamento  com o cliente está o marketing boca a boca. Por
-  que? Não é segredo para ninguém que quando a pessoa gosta de um produto e foi  bem
-  atendida, ela irá indica­lo para outras pessoas. E essa indicação tem um valor muito grande
-  para a credibilidade do seu negócio, pois não é você quem está dizendo que o seu produto
-  é bom, mas o cliente que ficou tão satisfeito e que quer passar isso para os outros. Quando
-  o cliente acredita na qualidade dos seus serviços passar isso para outras pessoas é um
-  processo natural.
-
-  Quando você tem uma necessidade não vai buscar ajuda dos amigos? É a mesma coisa e
-  a opinião de alguém que você conhece validando o serviço de uma empresa vale muito
-  mais do que uma propaganda paga. Na propaganda a pessoa olha desconfiada, porque ela
-  sabe que o objetivo é vender, diferente do marketing boca a boca, quem te indicou não vai
-  lucrar por fazer isso.
-
-
-  4– Marque presença na internet
-
-  Nós sabemos a força que a internet tem nos dias de hoje e isso deve ser levado em conta
-  no momento de pensar em como aumentar a visibilidade da sua empresa, fazer dela uma
-  referência no mercado e conquistar mais clientes.  É hora de pensar além dos panfletos,
-  propagandas pagas em impressos, no rádio ou na televisão. Não queremos dizer que essas
-  ações não são válidas, de forma nenhuma. Lembre­se sempre de pensar na sua persona,
-  onde ela está e quais meios de comunicação ela utiliza.
-
-  Para iniciar a sua empresa no mundo online uma boa opção é o uso das redes sociais e a
-  mais utilizada é o Facebook. Ao criar uma página do seu negócio no Facebook, você está
-  abrindo um canal de comunicação direta com seus clientes e possíveis compradores.
-  Através do Facebook, o cliente terá a oportunidade de ficar ainda mais próximo da marca,
-  de escrever uma revisão do seu produto, adicionando credibilidade ao seu negócio. É
-  sempre importante postar conteúdos que o  incentivem a compartilhar, comentar e participar
-  ativamente.  Nós já falamos do poder da marketing boca a boca e nas rede sociais funciona
-  de forma parecida. O seu público indicar e compartilhar a sua página para os amigos,
-  familiares irá criar um crescimento que a gente chama de orgânico, por que ele não
-  depende de anúncios pagos.  Essas ações vão valorizar ainda mais a imagem da sua
-  empresa.
-
-  Depois que a página do Facebook foi criada  é preciso fazer um planejamento de quantos
-  posts  serão feitos por dia, qual será o conteúdo deles e como será feito o
-  acompanhamento para responder as mensagens recebidas.  Essa é uma questão chave, se
-  você quer conseguir clientes pelo Facebook precisa ter uma presença constante, se uma
-  pessoa entra na página e envia uma pergunta sobre o produto ela espera uma resposta
-  rápida. A agilidade nesse atendimento será determinante para o sucesso.
-  Mas e o site da empresa? Vale a pena criar um blog? O site é uma referência onde a
-  pessoa poderá obter  informações essenciais sobre o seu produto, quem faz e como o
-  serviço é oferecido. Além disso, você pode inserir um chat, criando um canal rápido e
-  simples de comunicação. Já no blog, os posts devem ter conteúdos variados, mas sempre
-  pensando nas necessidades e dúvidas da sua persona.
-
-
-  E aí? Ficou animado com as nossas dicas e quer começar agora a implementar isso na sua
-  empresa? Faça uma consultoria gratuita de marketing por Whatsapp, entre em contato com
-  a gente e iremos sanar todas as suas dúvidas para fazer o seu negócio bombar ainda mais.',
+  title: 'Quatro dicas essenciais para conseguir novos clientes',
+  image: 'blog-1.svg', 
+  content: '<h6 style="text-align: center; margin-bottom: 15px; color: rgb(128, 128, 128); font-family: Roboto, Arial, sans-serif; font-size: 15px; line-height: 24px;"><span style="font-size: 14px;">Você tem um pequeno negócio e quer encontrar uma forma para conquistar mais clientes? Investir no marketing pode ser uma solução rápida e muito mais prática do que você imagina. Mas por onde começar? Primeiro, tire da sua cabeça a ideia de que marketing é somente fazer anúncios em jornais, revistas, televisão ou entregar panfletos. O marketing envolve muitos fatores que são essenciais para aumentar suas vendas, como criar o perfil do cliente, manter um bom relacionamento com ele, entender quais as melhores formas para tornar sua empresa mais conhecida, entre várias outras coisas. Dentro disso tudo está também o marketing pela internet. Através dele o seu negócio pode ganhar uma visibilidade muito maior, utilizando recursos gratuitos e que atingirão mais pessoas. Quer aprender como? Confira o nosso post. </span></h6><p style="margin-bottom: 15px; color: rgb(128, 128, 128); font-family: Roboto, Arial, sans-serif; font-size: 15px; line-height: 24px;"><h2><span style="font-size: 18px;"><b>Conheça o perfil dos seus clientes</b></span></h2><h6><span style="font-size: 14px;">Para quem você vende? Essa é uma pergunta essencial para identificar o seu público e criar estratégias que falem diretamente com ele. Ao saber para quem você deve direcionar a sua mensagem fica muito mais fácil descobrir qual linguagem usar e quais meios são mais eficazes para manter um bom relacionamento. Por exemplo, identificar se ele é uma pessoa que usa muito a internet e está sempre nas redes sociais ou se é um leitor assíduo de jornais. Esse mapeamento também vale para as ações de vendas, e vai te ajudar na hora de analisar quais tipos de promoções fazer ou se vale a pena investir em vendas online. </span></h6><h6><span style="font-size: 14px;">Com o perfil em mãos é hora de pensar em inserir valores para a sua marca que reflitam a personalidade do seu público, gerando credibilidade, fidelização e até mesmo uma relação afetiva com a empresa. Para conhecer o seu público é importante que você faça uma pesquisa focando em dados como a idade, sexo, profissão, estado civil, onde mora, entre outros. </span></h6><h6><span style="font-size: 14px;">No marketing nós utilizamos um termo que é denominado persona. Nós aplicamos os dados obtidos para criar o que seria um cliente imaginário que representa a maioria do nosso público, isso é a persona. Na hora de pensar em melhorias para o produto, inovações, propaganda, formas de conversar com ele você terá sempre em mente essa persona e poderá se perguntar “ o que a agradaria mais?”. Por exemplo, a dona de uma loja de roupas recolheu informações do seu público e constatou que a maioria das vendas é realizada para mulheres entre 20 e 25 anos, universitárias e que usam muito o Facebook e o Instagram para encontrarem referências de moda. A partir disso ela cria uma persona, a Carolina, de 22 anos, universitária e que está sempre antenada nas redes sociais. </span></h6><h6><span style="font-size: 14px;">Quais seriam as formas de falar com a Carolina? A empresária entende que ela precisa estar presente nas redes sociais, cria uma página no Facebook e um perfil no Instagram, pois nesses lugares que ela vai encontrar oportunidades para criar mais vendas. E aí? Viu como identificar o seu público pode ser útil?</span></h6></p><h6></h6><p style="margin-bottom: 15px; color: rgb(128, 128, 128); font-family: Roboto, Arial, sans-serif; font-size: 15px; line-height: 24px;"><h2><span style="font-size: 18px;"><b>Promova um bom relacionamento com o seu cliente</b></span></h2><h6><span style="font-size: 14px;">Com o foco de aumentar as vendas, muitas empresas pensam somente em como chamar novos compradores e se esquecem da importância de manter um relacionamento bom com os clientes que ela já tem. Esse relacionamento não deve ser deixado de lado nunca. Pense o seguinte: você quer que a pessoa compre o seu produto e não volte mais ou que ela mantenha um relacionamento duradouro com a empresa? Não tenho nem dúvidas de que é a segunda opção. Para desenvolver esse relacionamento é necessário criar estratégias de marketing e vendas voltadas para um atendimento personalizado e atencioso. </span></h6><h6><span style="font-size: 14px;">O seu vendedor deve se preocupar em entender quais são as necessidades do cliente e de que forma seu produto irá solucionar o problema dele. Pense nos valores que você quer transmitir. Você pode estabelecer algumas ações como: passar o telefone da empresa para que o cliente possa ligar no caso de dúvidas, fazer um cartão de fidelização onde ele terá descontos nas próximas compras, criar uma página no Facebook para que eles deixem seus comentários, entre outros.</span><span style="font-size: 14px;"> </span></h6></p><p style="margin-bottom: 15px; color: rgb(128, 128, 128); font-family: Roboto, Arial, sans-serif; font-size: 15px; line-height: 24px;"><h2><span style="font-size: 18px;"><b>Marketing boca a boca</b></span></h2><h6><br><span style="font-size: 14px;">Andando juntinho com o relacionamento com o cliente está o marketing boca a boca. Por que? Não é segredo para ninguém que quando a pessoa gosta de um produto e foi bem atendida, ela irá indica­lo para outras pessoas. E essa indicação tem um valor muito grande para a credibilidade do seu negócio, pois não é você quem está dizendo que o seu produto é bom, mas o cliente que ficou tão satisfeito e que quer passar isso para os outros. Quando o cliente acredita na qualidade dos seus serviços passar isso para outras pessoas é um processo natural. </span></h6><h6><span style="font-size: 14px;">Quando você tem uma necessidade não vai buscar ajuda dos amigos? É a mesma coisa e a opinião de alguém que você conhece validando o serviço de uma empresa vale muito mais do que uma propaganda paga. Na propaganda a pessoa olha desconfiada, porque ela sabe que o objetivo é vender, diferente do marketing boca a boca, quem te indicou não vai lucrar por fazer isso. </span></h6></p><p style="margin-bottom: 15px; color: rgb(128, 128, 128); font-family: Roboto, Arial, sans-serif; font-size: 15px; line-height: 24px;"><h2><span style="font-size: 18px;"><b>Marque presença na internet</b></span></h2><h6><span style="font-size: 14px;">Nós sabemos a força que a internet tem nos dias de hoje e isso deve ser levado em conta no momento de pensar em como aumentar a visibilidade da sua empresa, fazer dela uma referência no mercado e conquistar mais clientes. É hora de pensar além dos panfletos, propagandas pagas em impressos, no rádio ou na televisão. Não queremos dizer que essas ações não são válidas, de forma nenhuma. Lembre­se sempre de pensar na sua persona, onde ela está e quais meios de comunicação ela utiliza. </span></h6><h6><span style="font-size: 14px;">Para iniciar a sua empresa no mundo online uma boa opção é o uso das redes sociais e a mais utilizada é o Facebook. Ao criar uma página do seu negócio no Facebook, você está abrindo um canal de comunicação direta com seus clientes e possíveis compradores. Através do Facebook, o cliente terá a oportunidade de ficar ainda mais próximo da marca, de escrever uma revisão do seu produto, adicionando credibilidade ao seu negócio. É sempre importante postar conteúdos que o incentivem a compartilhar, comentar e participar ativamente. Nós já falamos do poder da marketing boca a boca e nas rede sociais funciona de forma parecida. O seu público indicar e compartilhar a sua página para os amigos, familiares irá criar um crescimento que a gente chama de orgânico, por que ele não depende de anúncios pagos. Essas ações vão valorizar ainda mais a imagem da sua empresa. </span></h6><h6><span style="font-size: 14px;">Depois que a página do Facebook foi criada é preciso fazer um planejamento de quantos posts serão feitos por dia, qual será o conteúdo deles e como será feito o acompanhamento para responder as mensagens recebidas. Essa é uma questão chave, se você quer conseguir clientes pelo Facebook precisa ter uma presença constante, se uma pessoa entra na página e envia uma pergunta sobre o produto ela espera uma resposta rápida. A agilidade nesse atendimento será determinante para o sucesso. Mas e o site da empresa? Vale a pena criar um blog? O site é uma referência onde a pessoa poderá obter informações essenciais sobre o seu produto, quem faz e como o serviço é oferecido. Além disso, você pode inserir um chat, criando um canal rápido e simples de comunicação. Já no blog, os posts devem ter conteúdos variados, mas sempre pensando nas necessidades e dúvidas da sua persona. </span></h6><h6><span style="font-size: 14px;">E aí? Ficou animado com as nossas dicas e quer começar agora a implementar isso na sua empresa? Faça uma consultoria gratuita de marketing por Whatsapp, entre em contato com a gente e iremos sanar todas as suas dúvidas para fazer o seu negócio bombar ainda mais.</span></h6></p><p><br></p>',
   author: 'Jaqueline Corradi'
 )
 Post.create(
 title: 'Mantra do empreendedor',
+image: 'blog-2.svg', 
 content: '
 Ser empreendedor é entender que o desafio de cada dia é a nossa maior motivação, é
 entender que os obstáculos nos estimulam para seguirmos em frente em cada tarefa.
@@ -186,6 +70,7 @@ author: 'Pedro Luis Charney'
 )
 Post.create(
 title: '7 DICAS DE COMO AUMENTAR SUAS VENDAS USANDO O INSTAGRAM',
+image: 'blog-3.svg', 
 content: 'Uma imagem vale mais que mil palavras. Deve ser por isso que o Instagram é a rede social
 do  momento.  Em  outubro  de  2015,  o  aplicativo  completou  5  anos  e,  desde  de  seu
 lançamento, os números não param de surpreender.
@@ -270,6 +155,7 @@ author: 'Jaqueline Corradi'
 )
 Post.create(
 title: '11 práticas que todo empreendedor precisa aplicar no seu dia a dia',
+image: 'blog-4.svg', 
 content: '
 
 
@@ -369,6 +255,7 @@ author: 'Pedro Luis Charney'
 )
 Post.create(
 title: "Como fazer marketing de engajamento com o Snap Chat?",
+image: 'blog-5.png', 
 content: "“Posso mesmo inserir o Snap na minha empresa?” “Funciona mesmo?” “Que
 tipo de conteúdo postar?”
 

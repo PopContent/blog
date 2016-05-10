@@ -62,7 +62,7 @@ h6 {
 }
 
 a, a:visited {
-	color:#ff8000;
+	color:#0B7998;
 	-webkit-transition:color .2s ease, background-color .2s ease, background .2s ease, border .2s ease, outline .2s ease, opacity .2s ease-in-out;
 	transition:color .2s ease, background-color .2s ease, background .2s ease, border .2s ease, outline .2s ease, opacity .2s ease-in-out;
 }
@@ -687,7 +687,7 @@ button.close:hover {
 #header .navbar {
 	min-height:0px;
 	color:#b0b0b0;
-	padding:40px 0px;
+	padding:10px 0px;
 	margin:0px;
 	border:0px;
 	border-radius:0px;
@@ -705,7 +705,7 @@ button.close:hover {
 	float:right;
 	height:40px;
 }
-	#header .nav > li { padding:11px 25px; }
+	#header .nav > li { padding: 17px 25px; }
 	#header .nav > li.menu-btn {
 		padding-top:6px;
 		padding-bottom:6px;

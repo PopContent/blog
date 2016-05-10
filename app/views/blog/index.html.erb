@@ -1,0 +1,57 @@
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container">
+
+    <div class="container">
+        <div class="row">
+            <!-- main start -->
+            <!-- ================ -->
+            <div class="main col-md-12">
+                <!-- timeline grid start -->
+                <!-- ================ -->
+                <div class="timeline clearfix">
+
+                    <div class="timeline-date-label clearfix">Maio 2016</div>
+                    <% @posts.each do |post| %>
+                        <!-- timeline grid item start -->
+                        <div class="timeline-item <%= cycle('pull-right', '') -%>">
+                            <!-- blogpost start -->
+                            <article class="blogpost shadow light-gray-bg bordered">
+                                <div class="overlay-container">
+                                    <img src="/assets/content/blog/<%= post.image %>" alt="">
+                                    <%= link_to post, class: 'overlay-link' do%>
+                                        <i class="fa fa-link"></i>
+                                    <% end %>
+                                </div>
+                                <header>
+                                    <h2><%= link_to post.title, post %></h2>
+                                    <div class="post-info">
+                                        <span class="post-date">
+                                            <i class="icon-calendar"></i>
+                                            <span class="day"><%= post.created_at.strftime("%d") %></span>
+                                            <span class="month"><%= I18n.l(post.created_at, format: "%B %Y") %></span>
+                                        </span>
+                                        <span class="submitted"><i class="icon-user-1"></i> por <a href="#"><%= post.author %></a></span>
+                                    </div>
+                                </header>
+                                <div class="blogpost-content">
+                                    <p><%= truncate_html(post.content, length: 350, separator: ' ', omission: '...') %></p>
+                                </div>
+                                <footer class="clearfix">
+                                    <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
+                                </footer>
+                            </article>
+                            <!-- blogpost end -->
+                        </div>
+                        <!-- timeline grid item end -->
+                    <% end %>
+
+                </div>
+                <!-- timeline grid end -->
+
+            </div>
+            <!-- main end -->
+
+        </div>
+    </div>
+</section>
