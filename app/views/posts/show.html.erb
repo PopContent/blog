@@ -1,21 +1,22 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @post.author %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @post.image %>
-</p>
+<div class="container margin-top50">
+    <article class="blogpost">
+        <div class="overlay-container">
+            <img src="/assets/content/blog/<%= @post.image %>" alt="">
+            <a class="overlay-link popup-img" href="/assets/content/blog/<%= @post.image %>"><i class="fa fa-search-plus"></i></a>
+        </div>
+        <header>
+            <h2><%= @post.title %></h2>
+            <div class="post-info">
+                <span class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span class="day">08</span>
+                    <span class="month">May 2015</span>
+                </span>
+                <span class="submitted"><i class="icon-user-1"></i> por <a href="#"><%= @post.author %></a></span>
+            </div>
+        </header>
+        <div class="blogpost-content">
+            <p><%= @post.content.html_safe %></p>
+        </div>
+    </article>
+</div>

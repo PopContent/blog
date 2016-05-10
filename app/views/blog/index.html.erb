@@ -35,8 +35,7 @@
                                     </div>
                                 </header>
                                 <div class="blogpost-content">
-
-                                    <p><%= truncate(post.content, length: 350, separator: ' ').html_safe %></p>
+                                    <p><%= truncate_html(post.content, length: 350, separator: ' ', omission: '...') %></p>
                                 </div>
                                 <footer class="clearfix">
                                     <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>

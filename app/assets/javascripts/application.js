@@ -21,7 +21,6 @@
 //= require jquery.fitvids
 //= require jquery.waypoints.min.js
 //= require jquery.counterup.min.js
-//= require jquery.infinite-pages
 //= require sweetalert.min.js
 //= require isotope/isotope.pkgd.min.js
 //= require magnific-popup/jquery.magnific-popup.min.js
