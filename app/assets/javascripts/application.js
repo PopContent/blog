@@ -1864,18 +1864,18 @@ if (jQuery(".btn-print").length>0) {
 
   'use strict';
 
-  var Landing = {
+  var PopContent = {
 
     // Initialization the functions
     init: function() {
-      Landing.AffixMenu();
-      Landing.MobileMenu();
-      Landing.ScrollSpy();
-      Landing.SmoothScroll();
-      Landing.FitVids();
-      Landing.PlaceHolder();
-      Landing.CounterUp();
-      Landing.Form();
+      PopContent.AffixMenu();
+      PopContent.MobileMenu();
+      PopContent.ScrollSpy();
+      PopContent.SmoothScroll();
+      PopContent.FitVids();
+      PopContent.PlaceHolder();
+      PopContent.CounterUp();
+      PopContent.SignUp();
     },
 
     // Navigation menu affix
@@ -1973,65 +1973,30 @@ if (jQuery(".btn-print").length>0) {
       });
     },
 
-    // Form submit function
-    Form: function() {
+    removeWarnings: function(input) {
+        var $input = $(input);
+
+        if ($input.hasClass('error')) {
+            $input.closest('.form-group').removeClass('has-error');
+            $input.siblings().remove('label.error');
+            $input.removeClass('error');
+        }
+
+        if ($input.hasClass('success')) {
+            $input.closest('.form-group').removeClass('has-success');
+            $input.removeClass('success');
+        }
+    },
+
+    // SignUp form
+    SignUp: function() {
       var pattern = /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
 
-      // Checking subcribe form input when focus and keypress event
-      $('#form-subscribe input[type="text"], #form-subscribe input[type="email"]').on('focus keypress', function() {
-        var $input = $(this);
-
-        if ($input.hasClass('error')) {
-          $input.val('').removeClass('error');
-        }
-        if ($input.hasClass('success')) {
-          $input.val('').removeClass('success');
-        }
-      });
-
       // Checking form input when focus and keypress event
-      $('#form-signup input[type="text"], #form-signup input[type="email"], #form-signup select').on('focus keypress', function() {
-        var $input = $(this);
-
-        if ($input.hasClass('error')) {
-          $input.removeClass('error');
-        }
-      });
-
-      // Subscribe form when submit button clicked
-      $('#form-subscribe').submit(function() {
-        var $email  = $(this).find('input[name="email"]');
-        var $submit = $(this).find('input[name="submit"]');
-
-        if (pattern.test($email.val()) === false) {
-          $email.val('Please enter a valid email address!').addClass('error');
-        } else {
-          var submitData = $(this).serialize();
-          $email.attr('disabled', 'disabled');
-          $submit.attr('disabled', 'disabled');
-          $.ajax({
-            type: 'POST',
-            url: '/leads',
-            data: submitData,
-            dataType: 'html',
-            success: function(msg) {
-              if (parseInt(msg, 0) !== 0) {
-                var msg_split = msg.split('|');
-
-                if (msg_split[0] === 'success') {
-                  $submit.removeAttr('disabled');
-                  $email.removeAttr('disabled').val(msg_split[1]).addClass('success');
-                } else {
-                  $submit.removeAttr('disabled');
-                  $email.removeAttr('disabled').val(msg_split[1]).addClass('error');
-                }
-              }
-            }
-          });
-        }
-
-        return false;
-      });
+      $('#form-signup input[type="text"], #form-signup input[type="email"], #form-signup select')
+        .on('focus keypress', function() {
+            PopContent.removeWarnings(this);
+        });
 
       // Signup form when submit button clicked
       $('#form-signup').submit(function() {
@@ -2056,17 +2021,27 @@ if (jQuery(".btn-print").length>0) {
             url: '/leads',
             data: submitData,
             dataType: 'html',
-            success: function(msg) {
-              var msg_split = msg.split('|');
+            success: function(message) {
               $name.removeAttr('disabled');
               $email.removeAttr('disabled');
 
               swal({
                   title: "Obrigado!",
-                  text: "Entraremos em contato o mais rápido possível!",
+                  text: message.responseText,
                   type: "success"
               });
+            },
+            error: function(message) {
+              swal({
+                  title: "Oh não!",
+                  text: message.responseText,
+                  type: "error"
+              });
             }
+          }).always(function() {
+                $name.prop('disabled', false);
+                $email.prop('disabled', false);
+                $submit.prop('disabled', false);
           });
         }
 
@@ -2080,7 +2055,7 @@ if (jQuery(".btn-print").length>0) {
 
   // Run the main function
   $(function() {
-    Landing.init();
+    PopContent.init();
   });
 
 })(window.jQuery);

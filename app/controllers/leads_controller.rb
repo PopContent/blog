@@ -1,3 +1,5 @@
+
+
 class LeadsController < ApplicationController
   before_action :set_lead, only: [:show, :edit, :update, :destroy]
 
@@ -28,12 +30,10 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to root_path, notice: 'Lead was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Entraremos em contato o mais rápido possível!' }
         format.json { render :nothing, status: :success }
-
       else
-        format.html { redirect_to root_path }
-        format.json { render :nothing, status: :unprocessable_entity }
+        format.json { render text: 'Este e-mail já está cadastrado.', status: 400 }
       end
     end
   end
