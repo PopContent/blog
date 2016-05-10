@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   resources :leads, only: [:create]
   resources :posts, only: [:show]
   root             'static_pages#home'
-  get 'help'    => 'static_pages#help'
-  get 'about'   => 'static_pages#about'
   get 'blog'    => 'blog#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
