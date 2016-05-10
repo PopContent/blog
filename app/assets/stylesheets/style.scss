@@ -82,7 +82,7 @@ figure { margin:0px; }
 		background-color:#f4f4f4;
 		border:0px;
 	}
-	
+
 video {
 	width:100%;
 	height:auto;
@@ -154,7 +154,7 @@ video {
 				color:#ff8000;
 				font-size:20px;
 			}
-			
+
 .required { color:#f63737; }
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], .ie input[type="range"], .ie9 input[type="range"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
@@ -349,7 +349,7 @@ input[type="button"], input[type="submit"], input[type="reset"], button {
 }
 	.btn-custom.btn-icon-first .fa { margin-right:10px; }
 	.btn-custom.btn-icon-last .fa { margin-left:10px; }
-	
+
 .btn-custom.btn-small, input[type="button"].btn-small, input[type="submit"].btn-small, input[type="reset"].btn-small, button.btn-small {
 	font-size:14px;
 	line-height:42px;
@@ -494,7 +494,7 @@ button.close:hover {
 		line-height:26px;
 		margin:12px 0px 0px;
 	}
-	
+
 .post-heading-left { margin-bottom:25px; }
 	.post-heading-left h2 {
 		font-size:30px;
@@ -508,7 +508,7 @@ button.close:hover {
 		margin:5px 0px 0px;
 	}
 	.post-heading-left.top-heading-desc p { margin:0px 0px 5px; }
-	
+
 .bg-grey {
 	background-color:#f6f8f9;
 	border-top:1px solid #eaedef;
@@ -555,14 +555,14 @@ button.close:hover {
 		padding-top:21px;
 		padding-bottom:21px;
 	}
-	
+
 .text-desc {
 	font-size:14px;
 	line-height:22px;
 	margin:12px 0px 0px;
 }
 	.text-desc a { font-weight:400; }
-	
+
 .affa-form-subscribe { position:relative; }
 	.affa-form-subscribe input[type="text"], .affa-form-subscribe input[type="email"] {
 		width:100%;
@@ -594,7 +594,7 @@ button.close:hover {
 		background-color:#b9edb9;
 		border-color:#a5dda5;
 	}
-	
+
 .tbl-pricing.tbl-prc-recommended { padding-top:26px; }
 	.tbl-pricing .tbl-prc-col {
 		text-align:center;
@@ -687,7 +687,7 @@ button.close:hover {
 #header .navbar {
 	min-height:0px;
 	color:#b0b0b0;
-	padding:40px 0px;
+	padding:10px 0px;
 	margin:0px;
 	border:0px;
 	border-radius:0px;
@@ -782,7 +782,7 @@ button.close:hover {
 				color:#ff8000;
 				border-top-color:#ff8000;
 			}
-			
+
 /* Navigation Mobile */
 #navigation_mobile {
 	display:none;
@@ -826,7 +826,7 @@ button.close:hover {
 			transition:color .2s ease;
 		}
 		#navigation_mobile .nav-menu-button button.nav-menu-toggle:hover { color:#FFF !important; }
-		
+
 /* Header Content */
 #header-content {
 	background:#212425 image-url('base-header.jpg') no-repeat fixed top center;
@@ -869,7 +869,7 @@ button.close:hover {
 	.ie #header-content .btn-link { background:image-url('ie-bg-header-btn-link.png') repeat top left; }
 	#header-content .btn-link:hover { background-color:rgba(0,0,0,.4); }
 	.ie #header-content .btn-link:hover { background:image-url('ie-bg-header-btn-link-hover.png') repeat top left; }
-	
+
 	#header-content .header-text {
 		font-size:16px;
 		text-align:center;
@@ -897,7 +897,7 @@ button.close:hover {
 				line-height:60px;
 				margin:0px 5px;
 			}
-			
+
 	#header-content .header-form-wrapper {
 		color:#808080;
 		background-color:#f6f8f9;
@@ -1003,7 +1003,7 @@ button.close:hover {
 			}
 				#header-content .header-form-wrapper .header-form .text-desc a { color:#a9a9a9; }
 				#header-content .header-form-wrapper .header-form .text-desc a:hover { color:#404040; }
-				
+
 #sub-header {
 	color:#FFF;
 	background-color:#ff8000;
@@ -1032,7 +1032,7 @@ button.close:hover {
 
 .intro-text { padding:40px 0px; }
 	.intro-text h3 { margin-bottom:20px; }
-	
+
 .affa_feature_icon {
 	position:relative;
 	min-height:70px;
@@ -1051,7 +1051,7 @@ button.close:hover {
 		margin:0px;
 	}
 	.affa_feature_icon p { margin:10px 0px 0px; }
-	
+
 .affa_col_text { margin-bottom:20px; }
 	.affa_col_text h4 {
 		font-size:18px;
@@ -1060,7 +1060,7 @@ button.close:hover {
 		margin:0px;
 	}
 	.affa_col_text p { margin:10px 0px 0px; }
-	
+
 .affa_counter_text {
 	text-align:center;
 	margin-bottom:40px;
@@ -1088,7 +1088,7 @@ button.close:hover {
 			border-right:1px solid #e4e4e4;
 		}
 		.row.row-counter > div:last-child .affa_counter_text { border-right:0px; }
-		
+
 .affa_testimonial { margin-bottom:40px; }
 	.affa_testimonial .affa_testimonial_text {
 		min-height:48px;
@@ -1135,7 +1135,7 @@ button.close:hover {
 		width:640px;
 		margin:0px auto;
 	}
-	
+
 #footer {
 	background-color:#f6f8f9;
 	padding:9px 0px;
@@ -1171,11 +1171,11 @@ button.close:hover {
 /* ========================= Media Queries ========================= */
 
 @media (min-width: 992px) and (max-width: 1199px) {
-	
+
 	.col-text40 { padding-top:0px; }
 	.col-text60, .col-text80 { padding-top:20px; }
 	.col-text100, .col-text120 { padding-top:40px; }
-	
+
 	.post-heading-center h2 {
 		font-size:32px;
 		line-height:40px;
@@ -1184,7 +1184,7 @@ button.close:hover {
 		font-size:18px;
 		line-height:24px;
 	}
-	
+
 	.post-heading-left h2 {
 		font-size:26px;
 		line-height:34px;
@@ -1193,40 +1193,40 @@ button.close:hover {
 		font-size:16px;
 		line-height:22px;
 	}
-	
+
 	.tbl-pricing .tbl-prc-col .tbl-prc-list {
 		padding-right:25px;
 		padding-left:25px;
 	}
-	
+
 	#header .nav > li {
 		padding-right:18px;
 		padding-left:18px;
 	}
-	
+
 	#navigation_affix .nav > li {
 		padding-right:10px;
 		padding-left:10px;
 	}
-	
+
 	#header-content { padding:110px 0px 150px; }
 	#header-content .header-form-wrapper .header-form-heading, #header-content .header-form-wrapper .header-form { padding:25px; }
-	
+
 	#sub-header .entry-title {
 		font-size:34px;
 		line-height:42px;
 	}
 	#sub-header p { margin-bottom:7px; }
-	
+
 	.affa_testimonial .affa_testimonial_name { padding-left:95px; }
 	.affa_testimonial .affa_testimonial_name img { left:0px; }
-	
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-	
+
 	.col-text40, .col-text60, .col-text80, .col-text100, .col-text120 { padding-top:0px; }
-	
+
 	.post-heading-center h2 {
 		font-size:28px;
 		line-height:36px;
@@ -1235,7 +1235,7 @@ button.close:hover {
 		font-size:16px;
 		line-height:22px;
 	}
-	
+
 	.post-heading-left h2 {
 		font-size:22px;
 		line-height:30px;
@@ -1244,22 +1244,22 @@ button.close:hover {
 		font-size:15px;
 		line-height:22px;
 	}
-	
+
 	.tbl-pricing .tbl-prc-col .tbl-prc-list {
 		padding-right:15px;
 		padding-left:15px;
 	}
-	
+
 	#header .nav > li {
 		padding-right:8px;
 		padding-left:8px;
 	}
-	
+
 	#navigation_affix .nav > li {
 		padding-right:5px;
 		padding-left:5px;
 	}
-	
+
 	#header-content { padding:80px 0px 120px; }
 	#header-content .header-heading-title h4 {
 		font-size:18px;
@@ -1269,13 +1269,13 @@ button.close:hover {
 		font-size:28px;
 		line-height:36px;
 	}
-	
+
 	#header-content .header-text {
 		font-size:15px;
 		padding-top:80px;
 	}
 	#header-content .header-form-wrapper .header-form-heading, #header-content .header-form-wrapper .header-form { padding:20px; }
-	
+
 	#sub-header .entry-title {
 		font-size:30px;
 		line-height:38px;
@@ -1285,7 +1285,7 @@ button.close:hover {
 		line-height:24px;
 		margin-bottom:6px;
 	}
-	
+
 	.affa_testimonial { text-align:center; }
 	.affa_testimonial .affa_testimonial_name {
 		padding:0px;
@@ -1299,23 +1299,23 @@ button.close:hover {
 		height:100px;
 		margin-bottom:10px;
 	}
-	
+
 }
 
 @media (max-width: 767px) {
-	
+
 	.no-padding-top-sm { padding-top:0px !important;	}
 	.no-padding-bottom-sm  { padding-bottom:0px !important; }
 	.no-padding-right-sm { padding-right:0px !important;	}
 	.no-padding-left-sm { padding-left:0px !important; }
-	
+
 	.no-margin-top-sm { margin-top:0px !important;	}
 	.no-margin-bottom-sm  { margin-bottom:0px !important; }
 	.no-margin-right-sm { margin-right:0px !important;	}
 	.no-margin-left-sm { margin-left:0px !important; }
-	
+
 	.col-text40, .col-text60, .col-text80, .col-text100, .col-text120 { padding-top:0px; }
-	
+
 	.post-heading-center h2 {
 		font-size:32px;
 		line-height:40px;
@@ -1324,7 +1324,7 @@ button.close:hover {
 		font-size:18px;
 		line-height:24px;
 	}
-	
+
 	.post-heading-left h2 {
 		font-size:26px;
 		line-height:34px;
@@ -1333,13 +1333,13 @@ button.close:hover {
 		font-size:16px;
 		line-height:22px;
 	}
-	
+
 	.tbl-pricing.tbl-prc-recommended { padding-top:0px; }
 	.tbl-pricing.tbl-prc-recommended .tbl-prc-col.tbl-prc-col-recommended { margin-top:0px; }
-	
+
 	#header .nav, #navigation_affix { display:none !important; }
 	#navigation_mobile { display:block; }
-	
+
 	#header .navbar-brand {
 		float:none;
 		text-align:center;
@@ -1349,10 +1349,10 @@ button.close:hover {
 		height:auto;
 		max-height:40px;
 	}
-	
+
 	#header-content { padding:0px 0px 40px; }
 	#header-content .header-text { padding-top:0px; }
-	
+
 	#sub-header {
 		color:#a9a9a9;
 		text-align:center;
@@ -1372,7 +1372,7 @@ button.close:hover {
 		text-shadow:none;
 		margin-bottom:6px;
 	}
-	
+
 	.row.row-counter > div .affa_counter_text {
 		padding:0px;
 		margin-bottom:40px;
@@ -1387,9 +1387,9 @@ button.close:hover {
 		margin:41px auto 0px;
 	}
 	.row.row-counter > div:last-child .affa_counter_text:after { display:none; }
-	
+
 	#bottom .affa-form-subscribe { width:auto; }
-	
+
 	#footer {
 		text-align:center;
 		padding:20px 0px;
@@ -1401,21 +1401,21 @@ button.close:hover {
 		float:none;
 		margin:10px 5px 0px;
 	}
-	
+
 }
 
 @media (max-width: 480px) {
-	
+
 	.tbl-pricing .tbl-prc-col .tbl-prc-list {
 		padding-right:25px;
 		padding-left:25px;
 	}
-	
+
 	#navigation_mobile ul {
 		padding-left:15px;
 		padding-right:15px;
 	}
-	
+
 	#header-content .header-heading-title h4 {
 		font-size:18px;
 		line-height:26px;
@@ -1424,10 +1424,10 @@ button.close:hover {
 		font-size:28px;
 		line-height:36px;
 	}
-	
+
 	#header-content .header-text { font-size:15px; }
 	#header-content .header-form-wrapper .header-form-heading, #header-content .header-form-wrapper .header-form { padding:25px; }
-	
+
 	.affa_feature_icon {
 		position:static;
 		min-height:0px;
@@ -1441,7 +1441,7 @@ button.close:hover {
 		width:64px;
 		margin-bottom:12px;
 	}
-	
+
 	.affa_testimonial { text-align:center; }
 	.affa_testimonial .affa_testimonial_name {
 		padding:0px;
@@ -1455,11 +1455,11 @@ button.close:hover {
 		height:100px;
 		margin-bottom:10px;
 	}
-	
+
 }
 
 @media (max-width: 400px) {
-	
+
 	.affa-form-subscribe input[type="text"], .affa-form-subscribe input[type="email"] { padding-right:20px; }
 	.affa-form-subscribe input[type="submit"] {
 		position:static;
@@ -1469,31 +1469,31 @@ button.close:hover {
 		width:100%;
 		margin-top:15px;
 	}
-	
+
 	.tbl-pricing .tbl-prc-col .tbl-prc-list {
 		padding-right:20px;
 		padding-left:20px;
 	}
-	
+
 	#header-content .header-form-wrapper .header-form-heading, #header-content .header-form-wrapper .header-form { padding:20px; }
-	
+
 }
 
 @media (max-width: 300px) {
-	
+
 	.tbl-pricing .tbl-prc-col .tbl-prc-list {
 		padding-right:15px;
 		padding-left:15px;
 	}
-	
+
 }
 
 @media (min-width: 992px) {
-	
+
 	#whats-app #whats-app-logo {
 		margin-top: 100px;
 	}
-	
+
 }
 #e-book {
 	border-bottom: none;

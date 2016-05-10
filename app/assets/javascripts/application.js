@@ -19,7 +19,7 @@
 //= require response.min.js
 //= require jquery.placeholder.min.js
 //= require jquery.fitvids
-//= require waypoints.min.js
+//= require jquery.waypoints.min.js
 //= require jquery.counterup.min.js
 //= require sweetalert.min.js
 //= require isotope/isotope.pkgd.min.js
