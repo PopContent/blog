@@ -22,4 +22,10 @@
 //= require waypoints.min.js
 //= require jquery.counterup.min.js
 //= require sweetalert.min.js
+//= require isotope/isotope.pkgd.min.js
+//= require magnific-popup/jquery.magnific-popup.min.js
+//= require jquery.parallax-1.1.3.js
+//= require owl-carousel/owl.carousel.js
+//= require SmoothScroll.js
+//= require modernizr.js
 //= require analytics.coffee
