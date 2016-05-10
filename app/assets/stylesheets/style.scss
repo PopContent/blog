@@ -1502,3 +1502,12 @@ button.close:hover {
 .sweet-alert .sa-button-container .confirm:hover {
 	background-color: #ee6400 !important;
 }
+
+.sweet-alert .sa-icon.sa-info {
+    border-color: #0B6588;
+}
+
+.sweet-alert .sa-icon.sa-info::before,
+.sweet-alert .sa-icon.sa-info::after {
+    background-color: #0B6588;
+}
