@@ -31,6 +31,7 @@
 //= require analytics.coffee
 
 
+
 (function($){
     $(document).ready(function(){
 
@@ -1163,25 +1164,6 @@
                     animation: ""+tr_animationEffect+"", // Overrides default "bounceIn"
                     separator: ",", // Overrides default ","
                     speed: 3000 // Overrides default 2000
-                });
-            });
-        };
-
-        // Stats Count To
-        //-----------------------------------------------
-        if ($(".stats [data-to]").length>0) {
-            $(".stats [data-to]").each(function() {
-                var stat_item = $(this),
-                offset = stat_item.offset().top;
-                if($(window).scrollTop() > (offset - 800) && !(stat_item.hasClass('counting'))) {
-                    stat_item.addClass('counting');
-                    stat_item.countTo();
-                };
-                $(window).scroll(function() {
-                    if($(window).scrollTop() > (offset - 800) && !(stat_item.hasClass('counting'))) {
-                        stat_item.addClass('counting');
-                        stat_item.countTo();
-                    }
                 });
             });
         };
