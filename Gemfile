@@ -14,6 +14,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.2.0.0'
 gem "font-awesome-rails"
 gem "truncate_html"
+gem "rails-i18n"
+
 
 group :development, :test do
   gem 'byebug'

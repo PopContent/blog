@@ -11,7 +11,7 @@
                 <!-- ================ -->
                 <div class="timeline clearfix">
 
-                    <div class="timeline-date-label clearfix">May 2015</div>
+                    <div class="timeline-date-label clearfix">Maio 2016</div>
                     <% @posts.each do |post| %>
                         <!-- timeline grid item start -->
                         <div class="timeline-item <%= cycle('pull-right', '') -%>">
@@ -28,8 +28,8 @@
                                     <div class="post-info">
                                         <span class="post-date">
                                             <i class="icon-calendar"></i>
-                                            <span class="day">10</span>
-                                            <span class="month">May 2015</span>
+                                            <span class="day"><%= post.created_at.strftime("%d") %></span>
+                                            <span class="month"><%= I18n.l(post.created_at, format: "%B %Y") %></span>
                                         </span>
                                         <span class="submitted"><i class="icon-user-1"></i> por <a href="#"><%= post.author %></a></span>
                                     </div>
@@ -46,100 +46,6 @@
                         <!-- timeline grid item end -->
                     <% end %>
 
-                    <div class="timeline-date-label clearfix">April 2015</div>
-
-                    <!-- timeline grid item start -->
-                    <div class="timeline-item">
-                        <!-- blogpost start -->
-                        <article class="blogpost shadow light-gray-bg bordered object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
-                            <div class="overlay-container">
-                                <img src="/assets/content/blog/blog-4.jpg" alt="">
-                                <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
-                            </div>
-                            <header>
-                                <h2><a href="blog-post.html">Distinctio magni aut illum</a></h2>
-                                <div class="post-info">
-                                    <span class="post-date">
-                                        <i class="icon-calendar"></i>
-                                        <span class="day">06</span>
-                                        <span class="month">May 2015</span>
-                                    </span>
-                                    <span class="submitted"><i class="icon-user-1"></i> by <a href="#">John Doe</a></span>
-                                    <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
-                                </div>
-                            </header>
-                            <div class="blogpost-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio magni aut illum animi laboriosam esse quidem sit illo fugit est culpa facilis amet, ab doloremque magnam, sapiente architecto natus. Voluptatem esse optio explicabo dolore impedit debitis deleniti porro doloribus provident perferendis nostrum quasi nobis magni atque mollitia, quas, quos corporis!</p>
-                            </div>
-                            <footer class="clearfix">
-                                <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
-                            </footer>
-                        </article>
-                        <!-- blogpost end -->
-                    </div>
-                    <!-- timeline grid item end -->
-
-                    <!-- timeline grid item start -->
-                    <div class="timeline-item pull-right">
-                        <!-- blogpost start -->
-                        <article class="blogpost shadow light-gray-bg bordered object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
-                            <header>
-                                <h2><a href="blog-post.html">Voluptatem esse optio explicabo dolore impedit</a></h2>
-                                <div class="post-info">
-                                    <span class="post-date">
-                                        <i class="icon-calendar"></i>
-                                        <span class="day">06</span>
-                                        <span class="month">May 2015</span>
-                                    </span>
-                                    <span class="submitted"><i class="icon-user-1"></i> by <a href="#">John Doe</a></span>
-                                    <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
-                                </div>
-                            </header>
-                            <div class="blogpost-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio magni aut illum animi laboriosam esse quidem sit illo fugit est culpa facilis amet, ab doloremque magnam, sapiente architecto natus. Voluptatem esse optio explicabo dolore impedit debitis deleniti porro doloribus provident perferendis nostrum quasi nobis magni atque mollitia, quas, quos corporis!</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto veniam, perspiciatis libero quasi, iusto delectus sed accusantium fugit inventore iure molestiae amet voluptatem, ut dolorem ex dolorum ea impedit quae!</p>
-                            </div>
-                            <footer class="clearfix">
-                                <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
-                            </footer>
-                        </article>
-                        <!-- blogpost end -->
-                    </div>
-                    <!-- timeline grid item end -->
-
-                    <!-- timeline grid item start -->
-                    <div class="timeline-item">
-                        <!-- blogpost start -->
-                        <article class="blogpost shadow light-gray-bg bordered object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
-                            <div class="overlay-container">
-                                <img src="/assets/content/blog/blog-1.jpg" alt="">
-                                <a class="overlay-link" href="blog-post.html"><i class="fa fa-link"></i></a>
-                            </div>
-                            <header>
-                                <h2><a href="blog-post.html">Successful business ideas</a></h2>
-                                <div class="post-info">
-                                    <span class="post-date">
-                                        <i class="icon-calendar"></i>
-                                        <span class="day">06</span>
-                                        <span class="month">May 2015</span>
-                                    </span>
-                                    <span class="submitted"><i class="icon-user-1"></i> by <a href="#">John Doe</a></span>
-                                    <span class="comments"><i class="icon-chat"></i> <a href="#">22 comments</a></span>
-                                </div>
-                            </header>
-                            <div class="blogpost-content">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto veniam, perspiciatis libero quasi, iusto delectus sed accusantium fugit inventore iure molestiae amet voluptatem, ut dolorem ex dolorum ea impedit quae!</p>
-                            </div>
-                            <footer class="clearfix">
-                                <div class="tags pull-left"><i class="icon-tags"></i> <a href="#">tag 1</a>, <a href="#">tag 2</a>, <a href="#">long tag 3</a></div>
-                                <div class="link pull-right"><i class="icon-link"></i><a href="#">Read More</a></div>
-                            </footer>
-                        </article>
-                        <!-- blogpost end -->
-                    </div>
-                    <!-- timeline grid item end -->
                 </div>
                 <!-- timeline grid end -->
 
