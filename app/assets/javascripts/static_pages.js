@@ -21,7 +21,7 @@
       var navMenu = '<nav id="navigation_affix">';
       navMenu   += '<div class="container">';
       navMenu   += '<div class="navbar-brand">';
-      navMenu   += '<a href="index.html"><img src="/assets/pop-content-logo.png" alt="Logo" /></a>';
+      navMenu   += '<a href="index.html"><img src="/assets/pop-content-logo.svg" alt="Logo" /></a>';
       navMenu   += '</div>';
       navMenu   += '<ul class="nav navbar-nav">';
       navMenu   += $('#navigation .nav.navbar-nav').html();
