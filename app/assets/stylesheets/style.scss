@@ -563,8 +563,8 @@ button.close:hover {
 }
 	.text-desc a { font-weight:400; }
 
-.affa-form-subscribe { position:relative; }
-	.affa-form-subscribe input[type="text"], .affa-form-subscribe input[type="email"] {
+.form-subscribe { position:relative; }
+	.form-subscribe input[type="text"], .form-subscribe input[type="email"] {
 		width:100%;
 		height:60px;
 		font-size:18px;
@@ -572,24 +572,24 @@ button.close:hover {
 		padding-right:165px;
 		border-radius:4px;
 	}
-	.affa-form-subscribe input[type="submit"] {
+	.form-subscribe input[type="submit"] {
 		position:absolute;
 		top:0px;
 		right:0px;
 		bottom:0px;
-		width:150px;
+		width:188px;
 		line-height:58px;
 		text-align:center;
 		text-transform:uppercase;
 		padding:0px;
-		border-radius:4px;
+		border-radius: 0px 4px 4px 0px;
 	}
-	.affa-form-subscribe input[type="text"].error, .affa-form-subscribe input[type="email"].error {
+	.form-subscribe input[type="text"].error, .form-subscribe input[type="email"].error {
 		color:#d86c6c;
 		background-color:#f6caca;
 		border-color:#e9b8b8;
 	}
-	.affa-form-subscribe input[type="text"].success, .affa-form-subscribe input[type="email"].success {
+	.form-subscribe input[type="text"].success, .form-subscribe input[type="email"].success {
 		color:#529552;
 		background-color:#b9edb9;
 		border-color:#a5dda5;
@@ -1131,7 +1131,7 @@ button.close:hover {
 	background:image-url('sep-border-bottom.png') no-repeat top center;
 	padding:60px 0px;
 }
-	#bottom .affa-form-subscribe {
+	#bottom .form-subscribe {
 		width:640px;
 		margin:0px auto;
 	}
@@ -1346,8 +1346,7 @@ button.close:hover {
 	}
 	#header .navbar-brand img {
 		display:inline;
-		height:auto;
-		max-height:40px;
+		height:50px;
 	}
 
 	#header-content { padding:0px 0px 40px; }
@@ -1388,7 +1387,7 @@ button.close:hover {
 	}
 	.row.row-counter > div:last-child .affa_counter_text:after { display:none; }
 
-	#bottom .affa-form-subscribe { width:auto; }
+	#bottom .form-subscribe { width:auto; }
 
 	#footer {
 		text-align:center;
@@ -1460,14 +1459,15 @@ button.close:hover {
 
 @media (max-width: 400px) {
 
-	.affa-form-subscribe input[type="text"], .affa-form-subscribe input[type="email"] { padding-right:20px; }
-	.affa-form-subscribe input[type="submit"] {
+	.form-subscribe input[type="text"], .form-subscribe input[type="email"] { padding-right:20px; }
+	.form-subscribe input[type="submit"] {
 		position:static;
 		top:auto;
 		right:auto;
 		bottom:auto;
 		width:100%;
 		margin-top:15px;
+        border-radius: 4px;
 	}
 
 	.tbl-pricing .tbl-prc-col .tbl-prc-list {
@@ -1502,3 +1502,44 @@ button.close:hover {
 .sweet-alert .sa-button-container .confirm:hover {
 	background-color: #ee6400 !important;
 }
+
+.sweet-alert .sa-icon.sa-info {
+    border-color: #0B6588;
+}
+
+.sweet-alert .sa-icon.sa-info::before,
+.sweet-alert .sa-icon.sa-info::after {
+    background-color: #0B6588;
+}
+
+.sweet-alert fieldset {
+    background-color: #fff;
+}
+
+.pop-organge {
+    color: #ff8000;
+}
+
+.bg-room-right {
+  background: url(/assets/bg-room-right.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.form-subscribe .error::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #d86c6c;
+}
+.form-subscribe .error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #d86c6c;
+   opacity: 1;
+}
+.form-subscribe .error::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #d86c6c;
+   opacity: 1;
+}
+.form-subscribe .error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #d86c6c;
+}
+

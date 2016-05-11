@@ -31,6 +31,7 @@
 //= require analytics.coffee
 
 
+
 (function($){
     $(document).ready(function(){
 
@@ -1167,25 +1168,6 @@
             });
         };
 
-        // Stats Count To
-        //-----------------------------------------------
-        if ($(".stats [data-to]").length>0) {
-            $(".stats [data-to]").each(function() {
-                var stat_item = $(this),
-                offset = stat_item.offset().top;
-                if($(window).scrollTop() > (offset - 800) && !(stat_item.hasClass('counting'))) {
-                    stat_item.addClass('counting');
-                    stat_item.countTo();
-                };
-                $(window).scroll(function() {
-                    if($(window).scrollTop() > (offset - 800) && !(stat_item.hasClass('counting'))) {
-                        stat_item.addClass('counting');
-                        stat_item.countTo();
-                    }
-                });
-            });
-        };
-
         // Isotope filters
         //-----------------------------------------------
         if ($('.isotope-container').length>0 || $('.masonry-grid').length>0 || $('.masonry-grid-fitrows').length>0 || $('.isotope-container-fitrows').length>0) {
@@ -1882,18 +1864,18 @@ if (jQuery(".btn-print").length>0) {
 
   'use strict';
 
-  var Landing = {
+  var PopContent = {
 
     // Initialization the functions
     init: function() {
-      Landing.AffixMenu();
-      Landing.MobileMenu();
-      Landing.ScrollSpy();
-      Landing.SmoothScroll();
-      Landing.FitVids();
-      Landing.PlaceHolder();
-      Landing.CounterUp();
-      Landing.Form();
+      PopContent.AffixMenu();
+      PopContent.MobileMenu();
+      PopContent.ScrollSpy();
+      PopContent.SmoothScroll();
+      PopContent.FitVids();
+      PopContent.PlaceHolder();
+      PopContent.CounterUp();
+      PopContent.SignUp();
     },
 
     // Navigation menu affix
@@ -1901,7 +1883,7 @@ if (jQuery(".btn-print").length>0) {
       var navMenu = '<nav id="navigation_affix">';
       navMenu   += '<div class="container">';
       navMenu   += '<div class="navbar-brand">';
-      navMenu   += '<a href="index.html"><img src="/assets/pop-content-logo.svg" alt="Logo" /></a>';
+      navMenu   += '<a href="/"><img src="/assets/pop-content-logo.svg" alt="Logo" /></a>';
       navMenu   += '</div>';
       navMenu   += '<ul class="nav navbar-nav">';
       navMenu   += $('#navigation .nav.navbar-nav').html();
@@ -1991,114 +1973,141 @@ if (jQuery(".btn-print").length>0) {
       });
     },
 
-    // Form submit function
-    Form: function() {
-      var pattern = /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
-
-      // Checking subcribe form input when focus and keypress event
-      $('#form-subscribe input[type="text"], #form-subscribe input[type="email"]').on('focus keypress', function() {
-        var $input = $(this);
+    removeWarnings: function(input) {
+        var $input = $(input);
 
         if ($input.hasClass('error')) {
-          $input.val('').removeClass('error');
+            $input.closest('.form-group').removeClass('has-error');
+            $input.siblings().remove('label.error');
+            $input.removeClass('error');
         }
+
         if ($input.hasClass('success')) {
-          $input.val('').removeClass('success');
+            $input.closest('.form-group').removeClass('has-success');
+            $input.removeClass('success');
         }
-      });
+    },
 
-      // Checking form input when focus and keypress event
-      $('#form-signup input[type="text"], #form-signup input[type="email"], #form-signup select').on('focus keypress', function() {
-        var $input = $(this);
+    // SignUp form
+    SignUp: function() {
+        var pattern = /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
 
-        if ($input.hasClass('error')) {
-          $input.removeClass('error');
-        }
-      });
+        // Checking form input when focus and keypress event
+        $('#form-signup input[type="text"], #form-signup input[type="email"], #form-signup select')
+        .on('focus keypress', function() {
+            PopContent.removeWarnings(this);
+        });
 
-      // Subscribe form when submit button clicked
-      $('#form-subscribe').submit(function() {
-        var $email  = $(this).find('input[name="email"]');
-        var $submit = $(this).find('input[name="submit"]');
+        $('#form-subscribe input[type="text"], #form-subscribe input[type="email"]')
+        .on('focus keypress', function() {
+            PopContent.removeWarnings(this);
+        });
 
-        if (pattern.test($email.val()) === false) {
-          $email.val('Please enter a valid email address!').addClass('error');
-        } else {
-          var submitData = $(this).serialize();
-          $email.attr('disabled', 'disabled');
-          $submit.attr('disabled', 'disabled');
-          $.ajax({
-            type: 'POST',
-            url: '/leads',
-            data: submitData,
-            dataType: 'html',
-            success: function(msg) {
-              if (parseInt(msg, 0) !== 0) {
-                var msg_split = msg.split('|');
-
-                if (msg_split[0] === 'success') {
-                  $submit.removeAttr('disabled');
-                  $email.removeAttr('disabled').val(msg_split[1]).addClass('success');
-                } else {
-                  $submit.removeAttr('disabled');
-                  $email.removeAttr('disabled').val(msg_split[1]).addClass('error');
-                }
-              }
+        // Signup form when submit button clicked
+        $('#form-signup').submit(function() {
+            var $form   = $(this);
+            var submitData  = $form.serialize();
+            var $name   = $form.find('input[name="lead[name]"]');
+            var $email    = $form.find('input[name="lead[email]"]');
+            var $submit   = $form.find('input[name="submit"]');
+            var status    = true;
+            if ($email.val() === '' || pattern.test($email.val()) === false) {
+              $email.addClass('error');
+              status = false;
             }
-          });
-        }
 
-        return false;
-      });
+            if (status) {
+              $name.attr('disabled', 'disabled');
+              $email.attr('disabled', 'disabled');
+              $submit.attr('disabled', 'disabled');
 
-      // Signup form when submit button clicked
-      $('#form-signup').submit(function() {
-        var $form   = $(this);
-        var submitData  = $form.serialize();
-        var $name   = $form.find('input[name="lead[name]"]');
-        var $email    = $form.find('input[name="lead[email]"]');
-        var $submit   = $form.find('input[name="submit"]');
-        var status    = true;
-        if ($email.val() === '' || pattern.test($email.val()) === false) {
-          $email.addClass('error');
-          status = false;
-        }
+              $.ajax({
+                type: 'POST',
+                url: '/leads',
+                data: submitData,
+                dataType: 'html',
+                success: function(message) {
+                  $name.removeAttr('disabled');
+                  $email.removeAttr('disabled');
 
-        if (status) {
-          $name.attr('disabled', 'disabled');
-          $email.attr('disabled', 'disabled');
-          $submit.attr('disabled', 'disabled');
-
-          $.ajax({
-            type: 'POST',
-            url: '/leads',
-            data: submitData,
-            dataType: 'html',
-            success: function(msg) {
-              var msg_split = msg.split('|');
-              $name.removeAttr('disabled');
-              $email.removeAttr('disabled');
-
-              swal({
-                  title: "Obrigado!",
-                  text: "Entraremos em contato o mais rápido possível!",
-                  type: "success"
+                  swal({
+                      title: "Obrigado!",
+                      text: message,
+                      type: "success"
+                  });
+                },
+                error: function(message) {
+                  swal({
+                      title: "Oh não!",
+                      text: message.responseText,
+                      type: "error"
+                  });
+                }
+              }).always(function() {
+                    $name.prop('disabled', false);
+                    $email.prop('disabled', false);
+                    $submit.prop('disabled', false);
               });
             }
-          });
-        }
 
-        status = true;
+            status = true;
 
-        return false;
-      });
+            return false;
+        });
+
+        // Subscribe form when submit button clicked
+        $('#form-subscribe').submit(function() {
+            var $form   = $(this);
+            var submitData  = $form.serialize();
+            var $email    = $form.find('input[name="lead[email]"]');
+            var $submit   = $form.find('input[name="submit"]');
+            var status    = true;
+            if ($email.val() === '' || pattern.test($email.val()) === false) {
+              $email.addClass('error');
+              status = false;
+            }
+
+            if (status) {
+              $email.attr('disabled', 'disabled');
+              $submit.attr('disabled', 'disabled');
+
+              $.ajax({
+                type: 'POST',
+                url: '/leads',
+                data: submitData,
+                dataType: 'html',
+                success: function(message) {
+                  $email.removeAttr('disabled');
+
+                  swal({
+                      title: "Obrigado!",
+                      text: message,
+                      type: "success"
+                  });
+                },
+                error: function(message) {
+                  swal({
+                      title: "Oh não!",
+                      text: message.responseText,
+                      type: "error"
+                  });
+                }
+              }).always(function() {
+                    $email.prop('disabled', false);
+                    $submit.prop('disabled', false);
+              });
+            }
+
+            status = true;
+
+            return false;
+        });
     }
-
-  };
+};
 
   // Run the main function
-  $(function() {
-    Landing.init();
-  });
+$(function() {
+    PopContent.init();
+});
 
 })(window.jQuery);
