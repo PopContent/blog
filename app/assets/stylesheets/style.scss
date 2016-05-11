@@ -1512,6 +1512,10 @@ button.close:hover {
     background-color: #0B6588;
 }
 
+.sweet-alert fieldset {
+    background-color: #fff;
+}
+
 .pop-organge {
     color: #ff8000;
 }
@@ -1522,5 +1526,20 @@ button.close:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.form-subscribe .error::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #d86c6c;
+}
+.form-subscribe .error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #d86c6c;
+   opacity: 1;
+}
+.form-subscribe .error::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #d86c6c;
+   opacity: 1;
+}
+.form-subscribe .error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #d86c6c;
 }
 

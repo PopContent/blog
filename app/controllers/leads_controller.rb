@@ -28,8 +28,7 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to root_path, notice: 'Entraremos em contato o mais rápido possível!' }
-        format.json { render :nothing, status: :success }
+        format.json { render text: 'Entraremos em contato o mais rápido possível!', status: 200 }
       else
         format.json { render text: 'Este e-mail já está cadastrado.', status: 400 }
       end
