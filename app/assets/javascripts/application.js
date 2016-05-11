@@ -28,7 +28,7 @@
 //= require owl-carousel/owl.carousel.js
 //= require SmoothScroll.js
 //= require modernizr.js
-//= require analytics.coffee
+//= require google_analytics.coffee
 
 
 
