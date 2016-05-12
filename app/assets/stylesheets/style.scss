@@ -1534,6 +1534,20 @@ button.close:hover {
   border-color: #f7f7f7;
 }
 
+.dropdown > a:after {
+    font-family: 'FontAwesome';
+    content: "\f107";
+    line-height: 1;
+    color: #d1d1d1;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.dropdown > a:hover:after,
+.dropdown > a:focus:after {
+    color: #FFF;
+}
+
 @media (min-width: 992px) {
 
   #whats-app #whats-app-logo {
@@ -1606,13 +1620,4 @@ button.close:hover {
 
 .field_with_errors {
   @extend .has-error;
-}
-
-.dropdown > a:after {
-    font-family: 'FontAwesome';
-    content: "\f107";
-    line-height: 1;
-    color: #d1d1d1;
-    font-size: 14px;
-    margin-left: 5px;
 }
