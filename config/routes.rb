@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root             'static_pages#home'
-  get 'blog'    => 'blog#index'
+  get    'blog'    => 'blog#index'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   resources :users
   resources :leads, only: [:create]
   resources :posts, only: [:show]
