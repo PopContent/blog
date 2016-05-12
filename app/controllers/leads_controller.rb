@@ -7,20 +7,6 @@ class LeadsController < ApplicationController
     @leads = Lead.all
   end
 
-  # GET /leads/1
-  # GET /leads/1.json
-  def show
-  end
-
-  # GET /leads/new
-  def new
-    @lead = Lead.new
-  end
-
-  # GET /leads/1/edit
-  def edit
-  end
-
   # POST /leads
   # POST /leads.json
   def create
@@ -30,7 +16,7 @@ class LeadsController < ApplicationController
       if @lead.save
         format.json { render text: 'Entraremos em contato o mais rápido possível!', status: 200 }
       else
-        format.json { render text: 'Este e-mail já está cadastrado.', status: 400 }
+        format.json { render text: @lead.errors.full_messages.to_sentence, status: 400 }
       end
     end
   end
@@ -44,7 +30,8 @@ class LeadsController < ApplicationController
         format.json { render :show, status: :ok, location: @lead }
       else
         format.html { render :edit }
-        format.json { render json: @lead.errors, status: :unprocessable_entity }
+        format.json { render json: @lead.errors.full_messages.to_sentence, status: :unprocessable_entity }
+        #@reservation.errors.full_messages.to_sentence
       end
     end
   end
