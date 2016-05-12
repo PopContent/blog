@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-
+  root             'static_pages#home'
+  get 'blog'    => 'blog#index'
   resources :users
   resources :leads, only: [:create]
   resources :posts, only: [:show]
-  root             'static_pages#home'
-  get 'blog'    => 'blog#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
