@@ -1,19 +1,16 @@
 require 'rails_helper'
 
-RSpec.feature "StaticPages", type: :feature do
-  scenario "Visits home" do
+RSpec.feature "Landing Page", type: :feature do
+  scenario "Sign up the lead successfully with a valid email" do
     visit "/"
 
-    expect(page).to have_title "Home"
+    expect(page).to have_title "PopContent"
   end
-  scenario "Visits help" do
-    visit "/help"
 
-    expect(page).to have_title "Help"
-  end
-  scenario "Visits about" do
-    visit "/about"
+  #https://thoughtbot.com/upcase/test-driven-rails-resources/rspec_acceptance.pdf
+  scenario "notifies the user if his email is invalid" do
+    #visit "/"
 
-    expect(page).to have_title "About"
+    #expect(page).to have_title "PopContent"
   end
 end

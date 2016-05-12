@@ -3,15 +3,10 @@ require 'rails_helper'
 RSpec.describe Lead, type: :model do
   before(:each) do
     @lead = Lead.new(name: "Name Surname", email: "user@domain.com")
-  end 
+  end
 
   it "should be valid" do
     expect(@lead).to be_valid
-  end
-
-  it "name should be present" do
-    @lead.name = ""
-    expect(@lead).to_not be_valid
   end
 
   it "email should be present" do

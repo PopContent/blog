@@ -1,10 +1,5 @@
 require 'rails_helper'
 
 RSpec.describe "Leads", type: :request do
-  describe "GET /leads" do
-    it "works! (now write some real specs)" do
-      get leads_path
-      expect(response).to have_http_status(:success)
-    end
-  end
+  pending "add some examples to (or delete) #{__FILE__}"
 end
