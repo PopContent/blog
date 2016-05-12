@@ -1491,7 +1491,7 @@ button.close:hover {
 @media (min-width: 992px) {
 
 	#whats-app #whats-app-logo {
-		margin-top: 55px;
+		margin-top: 10px;
 	}
 
 }
@@ -1541,5 +1541,10 @@ button.close:hover {
 }
 .form-subscribe .error:-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: #d86c6c;
+}
+
+.subscribe-box {
+    text-align: center;
+    padding-top: 25px;
 }
 
