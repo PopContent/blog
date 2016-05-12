@@ -701,7 +701,6 @@ button.close:hover {
 		#header .navbar-brand img { height:50px; }
 	#navigation_affix .navbar-brand img { height:40px; }
 #header .nav, #navigation_affix .nav {
-	overflow:hidden;
 	float:right;
 	height:40px;
 }
@@ -1488,6 +1487,51 @@ button.close:hover {
 
 }
 
+/* dropdown menus */
+.dropdown-menu .divider {
+  background-color: #ededed;
+}
+.dropdown-menu {
+  min-width: 220px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f1f1;
+  z-index: 101;
+}
+/* second level menu item */
+.dropdown-menu > li > a {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333333;
+  border-bottom: 1px solid #f7f7f7;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  position: relative;
+}
+/* second level menu item on focus/hover and when opened */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu .menu > .active > a,
+.dropdown-menu .menu > .active > a:hover,
+.dropdown-menu .menu > .active > a:focus {
+  background-color: #fcfcfc;
+  color: #0c9ec7;
+  border-color: #f7f7f7;
+}
+
 @media (min-width: 992px) {
 
 	#whats-app #whats-app-logo {
@@ -1548,3 +1592,25 @@ button.close:hover {
     padding-top: 25px;
 }
 
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+.field_with_errors {
+  @extend .has-error;
+}
+
+.dropdown > a:after {
+    font-family: 'FontAwesome';
+    content: "\f107";
+    line-height: 1;
+    color: #d1d1d1;
+    font-size: 14px;
+    margin-left: 5px;
+}

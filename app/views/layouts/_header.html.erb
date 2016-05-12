@@ -14,20 +14,21 @@
             </div>
 
             <ul class="nav navbar-nav">
-                <% if params[:controller] != 'static_pages' %>
-                    <li><a href="<%= root_path(anchor: 'header' ) %>" class="smooth-scroll">Home</a></li>
-                    <li><a href="<%= root_path(anchor: 'e-book' ) %>" class="smooth-scroll">E-book</a></li>
-                    <li><a href="<%= root_path(anchor: 'whats-app' ) %>" class="smooth-scroll">WhatsApp</a></li>
-                    <li><a href="<%= root_path(anchor: 'about-us' ) %>" class="smooth-scroll">O Time</a></li>
-                    <li class="active"><%= link_to 'Blog', blog_path%></li>
-                <% else %>
-                    <li class="active"><a href="#header" class="smooth-scroll">Home</a></li>
-                    <li><a href="#e-book" class="smooth-scroll">E-book</a></li>
-                    <li><a href="#whats-app" class="smooth-scroll">WhatsApp</a></li>
-                    <li><a href="#about-us" class="smooth-scroll">O Time</a></li>
-                    <li><%= link_to 'Blog', blog_path%></li>
-                <% end %>
+              <% if params[:controller] != 'static_pages' %>
+                <li><a href="<%= root_path(anchor: 'header' ) %>" class="smooth-scroll">Home</a></li>
+                <li><a href="<%= root_path(anchor: 'e-book' ) %>" class="smooth-scroll">E-book</a></li>
+                <li><a href="<%= root_path(anchor: 'whats-app' ) %>" class="smooth-scroll">WhatsApp</a></li>
+                <li><a href="<%= root_path(anchor: 'about-us' ) %>" class="smooth-scroll">O Time</a></li>
+                <li class="active"><%= link_to 'Blog', blog_path%></li>
+              <% else %>
+                <li class="active"><a href="#header" class="smooth-scroll">Home</a></li>
+                <li><a href="#e-book" class="smooth-scroll">E-book</a></li>
+                <li><a href="#whats-app" class="smooth-scroll">WhatsApp</a></li>
+                <li><a href="#about-us" class="smooth-scroll">O Time</a></li>
+                <li><%= link_to 'Blog', blog_path%></li>
+              <% end %>
             </ul>
+
         </div>
         <!-- .container end -->
 

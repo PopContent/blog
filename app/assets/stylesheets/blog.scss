@@ -4863,49 +4863,6 @@ fieldset[disabled] .form-control {
 .header.centered .main-navigation .dropdown-menu {
   top: 99%;
 }
-.dropdown-menu .divider {
-  background-color: #ededed;
-}
-.dropdown-menu {
-  min-width: 220px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  padding: 0;
-  margin: 0;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.06);
-  border: 1px solid #f1f1f1;
-  z-index: 101;
-}
-/* second level menu item */
-.dropdown-menu > li > a {
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #333333;
-  border-bottom: 1px solid #f7f7f7;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-  position: relative;
-}
-/* second level menu item on focus/hover and when opened */
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus,
-.nav .open > a,
-.nav .open > a:hover,
-.nav .open > a:focus,
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus,
-.dropdown-menu .menu > .active > a,
-.dropdown-menu .menu > .active > a:hover,
-.dropdown-menu .menu > .active > a:focus {
-  background-color: #fcfcfc;
-  color: #0c9ec7;
-  border-color: #f7f7f7;
-}
 /* third level menu */
 .dropdown-menu .dropdown-menu {
   top: -1px;
@@ -5015,17 +4972,6 @@ header .dropdown-menu > li.active > a i.fa-circle-o:before {
 }
 /* Arrow for parent menu item
 ------------------------------ */
-.dropdown > a:before {
-  font-family: 'FontAwesome';
-  content: "\f107";
-  position: absolute;
-  left: auto;
-  top: 31px;
-  right: 6px;
-  line-height: 1;
-  color: #d1d1d1;
-  font-size: 14px;
-}
 .header.centered .dropdown > a:before {
   top: 18px;
 }
