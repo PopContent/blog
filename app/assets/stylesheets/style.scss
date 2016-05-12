@@ -745,7 +745,6 @@ button.close:hover {
 
 /* Navigation Affix */
 #navigation_affix {
-  overflow:hidden;
   position:fixed;
   top:-60px;
   right:0px;
@@ -1541,11 +1540,21 @@ button.close:hover {
     color: #d1d1d1;
     font-size: 14px;
     margin-left: 5px;
+    transition-duration: 0.2s;
 }
 
 .dropdown > a:hover:after,
 .dropdown > a:focus:after {
     color: #FFF;
+}
+
+#navigation_affix .dropdown > a:after {
+  color: #4a4a4a;
+}
+
+#navigation_affix .dropdown > a:hover:after,
+#navigation_affix .dropdown > a:focus:after {
+    color: #ff8000;
 }
 
 @media (min-width: 992px) {
