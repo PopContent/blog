@@ -25,7 +25,6 @@ RSpec.describe LeadsController, type: :controller do
   # adjust the attributes here as well.
   let(:valid_email) {{name: nil, email: 'user@domain.com'}}
   let(:invalid_email) {{name: nil, email: 'sadcxz'}}
-  let(:nil_email) {{name: nil, email: 1}}
 
   describe "GET #index" do
     xit "assigns all leads as @leads" do
