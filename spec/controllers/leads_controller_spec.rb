@@ -23,130 +23,68 @@ RSpec.describe LeadsController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Lead. As you add validations to Lead, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    {name: 'Name Surname', email: 'user@domain.com'}
-  }
-
-  let(:invalid_attributes) {
-    {name: '    ', email: 'user-domain.com'}
-  }
-
-  # This should return the minimal set of values that should be in the session
-  # in order to pass any filters (e.g. authentication) defined in
-  # LeadsController. Be sure to keep this updated too.
-  let(:valid_session) { {} }
+  let(:valid_email) {{name: nil, email: 'user@domain.com'}}
+  let(:invalid_email) {{name: nil, email: 'sadcxz'}}
+  let(:nil_email) {{name: nil, email: 1}}
 
   describe "GET #index" do
-    it "assigns all leads as @leads" do
-      lead = Lead.create! valid_attributes
+    xit "assigns all leads as @leads" do
+      lead = Lead.create! valid_email
       get :index, {}, valid_session
       expect(assigns(:leads)).to eq([lead])
     end
   end
 
-  describe "GET #show" do
-    it "assigns the requested lead as @lead" do
-      lead = Lead.create! valid_attributes
-      get :show, {:id => lead.to_param}, valid_session
-      expect(assigns(:lead)).to eq(lead)
-    end
-  end
-
-  describe "GET #new" do
-    it "assigns a new lead as @lead" do
-      get :new, {}, valid_session
-      expect(assigns(:lead)).to be_a_new(Lead)
-    end
-  end
-
-  describe "GET #edit" do
-    it "assigns the requested lead as @lead" do
-      lead = Lead.create! valid_attributes
-      get :edit, {:id => lead.to_param}, valid_session
-      expect(assigns(:lead)).to eq(lead)
-    end
-  end
-
   describe "POST #create" do
-    context "with valid params" do
+    context "with valid email" do
       it "creates a new Lead" do
         expect {
-          post :create, {:lead => valid_attributes}, valid_session
+          post :create, lead: valid_email, format: :json
         }.to change(Lead, :count).by(1)
       end
 
       it "assigns a newly created lead as @lead" do
-        post :create, {:lead => valid_attributes}, valid_session
+        post :create, lead: valid_email, format: :json
         expect(assigns(:lead)).to be_a(Lead)
         expect(assigns(:lead)).to be_persisted
       end
 
-      it "redirects to the created lead" do
-        post :create, {:lead => valid_attributes}, valid_session
-        expect(response).to redirect_to(Lead.last)
+      it "return success code" do
+        post :create, lead: valid_email, format: :json
+        expect(response.success?).to be true
+      end
+
+      it "return contact message" do
+        post :create, lead: valid_email, format: :json
+        expect(response.body).to eq('Entraremos em contato o mais rápido possível!')
       end
     end
 
-    context "with invalid params" do
+    context "with invalid email" do
       it "assigns a newly created but unsaved lead as @lead" do
-        post :create, {:lead => invalid_attributes}, valid_session
+        post :create, lead: invalid_email, format: :json
         expect(assigns(:lead)).to be_a_new(Lead)
       end
 
-      it "re-renders the 'new' template" do
-        post :create, {:lead => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
+      it "returns invalid email message" do
+        post :create, lead: invalid_email, format: :json
+        expect(response.body).to eq("Email inválido")
+      end
+    end
+
+    context "with duplicate email" do
+      it "creates only the first Lead" do
+        expect {
+          post :create, lead: valid_email, format: :json
+          post :create, lead: valid_email, format: :json
+        }.to change(Lead, :count).by(1)
+      end
+
+      it "returns duplicate email message" do
+        post :create, lead: valid_email, format: :json
+        post :create, lead: valid_email, format: :json
+        expect(response.body).to eq("Email já está em uso")
       end
     end
   end
-
-  describe "PUT #update" do
-    context "with valid params" do
-      let(:new_attributes) {
-        {name: 'Name Surname', email: 'user@domain.com'}
-      }
-
-      it "assigns the requested lead as @lead" do
-        lead = Lead.create! valid_attributes
-        put :update, {:id => lead.to_param, :lead => valid_attributes}, valid_session
-        expect(assigns(:lead)).to eq(lead)
-      end
-
-      it "redirects to the lead" do
-        lead = Lead.create! valid_attributes
-        put :update, {:id => lead.to_param, :lead => valid_attributes}, valid_session
-        expect(response).to redirect_to(lead)
-      end
-    end
-
-    context "with invalid params" do
-      it "assigns the lead as @lead" do
-        lead = Lead.create! valid_attributes
-        put :update, {:id => lead.to_param, :lead => invalid_attributes}, valid_session
-        expect(assigns(:lead)).to eq(lead)
-      end
-
-      it "re-renders the 'edit' template" do
-        lead = Lead.create! valid_attributes
-        put :update, {:id => lead.to_param, :lead => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE #destroy" do
-    it "destroys the requested lead" do
-      lead = Lead.create! valid_attributes
-      expect {
-        delete :destroy, {:id => lead.to_param}, valid_session
-      }.to change(Lead, :count).by(-1)
-    end
-
-    it "redirects to the leads list" do
-      lead = Lead.create! valid_attributes
-      delete :destroy, {:id => lead.to_param}, valid_session
-      expect(response).to redirect_to(leads_url)
-    end
-  end
-
 end
