@@ -39,4 +39,10 @@ RSpec.describe Lead, type: :model do
     expect(duplicate_lead).not_to be_valid
   end
 
+  it "email addresses should be saved as lower-case" do
+    mixed_case_email = "Foo@ExAMPle.CoM"
+    @lead.email = mixed_case_email
+    @lead.save
+    expect(mixed_case_email.downcase).to eq(@lead.reload.email)
+  end
 end
