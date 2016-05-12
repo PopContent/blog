@@ -5,4 +5,4 @@ RewriteCond %{HTTP_HOST} ^54\.235\.95\.216
 RewriteRule (.*) http://www.popcontent.blog.br/$1 [R=301,L]
 
 RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
-RewriteRule .* ? [F,L]
+RewriteRule .* ? [F,L]c
