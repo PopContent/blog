@@ -17,7 +17,10 @@
     </div>
   </div>
 
-  <%= link_to('#', data: {target: '#modal-e-book', toggle: 'modal'}) do %>
+  <%= link_to('#', data: {target: '#modal-e-book', toggle: 'modal'}, class: 'hidden-xs hidden-sm') do %>
     <%= image_tag('/assets/low_banner.png') %>
+  <%end%>
+  <%= link_to('#', data: {target: '#modal-e-book', toggle: 'modal'}, class: 'visible-xs visible-sm') do %>
+    <%= image_tag('/assets/low_banner_xs.png') %>
   <%end%>
 </div>
