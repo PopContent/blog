@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container margin-bottom40">
   <%= form_for @user, html: {class: "form-horizontal", role: "form"} do |f| %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
@@ -32,8 +32,10 @@
       <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
 
-    <div class="text-center">
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+    <div class="actions">
+      <%= f.submit class: 'btn btn-custom right' %>
     </div>
+    <%= link_to 'Voltar', users_path, class: 'btn btn-custom right margin-right10'  %>
+
   <% end %>
 </div>
