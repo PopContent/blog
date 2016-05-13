@@ -29,7 +29,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        flash[:success] = "Post criado com sucesso"
+        format.html { redirect_to posts_path }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -43,7 +44,8 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        flash[:success] = "Edição realizada com sucesso"
+        format.html { redirect_to posts_path }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -57,7 +59,8 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      flash[:success] = "Post foi excluído com sucesso."
+      format.html { redirect_to posts_url }
       format.json { head :no_content }
     end
   end

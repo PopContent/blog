@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update(user_params)
         flash[:success] = "Edição realizada com sucesso"
-        format.html { redirect_to @user }
+        format.html { redirect_to users_path }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -60,8 +60,8 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      flash[:warning] = "Usuario #{@user.name} foi excluído."
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      flash[:success] = "Usuario #{@user.name} foi excluído com sucesso."
+      format.html { redirect_to users_url }
       format.json { head :no_content }
     end
   end

@@ -31,4 +31,12 @@ $(document).ready(function(){
         $('#post-content-editor').summernote('destroy');
     });
 
+    $('form.edit_post').submit(function() {
+        var aHTML = $('#post-content-editor').summernote('code');
+        $('#post_content').val(aHTML);
+        if ($('.summernote').summernote('isEmpty')) {
+            $('#post_content').val('');
+        }
+        return true;
+    });
 });
