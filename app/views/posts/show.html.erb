@@ -23,8 +23,6 @@
             <p><%= @post.content.html_safe %></p>
         </div>
     </article>
+    <%= render 'shared/bottom_banner' %>
 </div>
 
-<%= link_to('#', data: {target: '#modal-e-book', toggle: 'modal'}) do %>
-  <%= image_tag('/assets/low_banner.png') %>
-<%end%>
