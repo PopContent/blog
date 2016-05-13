@@ -28,6 +28,8 @@
 //= require owl-carousel/owl.carousel.js
 //= require SmoothScroll.js
 //= require modernizr.js
+//= require summernote/summernote.min.js
+//= require summernote/summernote-pt-BR.js
 //= require google_analytics.coffee
 
 

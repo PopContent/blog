@@ -1,4 +1,27 @@
 @import "blog";
+@import "summernote/summernote";
+
+.summernote .button {
+
+}
+
+.summernote-wrapper .note-editor .btn-group.note-style > .btn-group:last-child > .btn,
+.summernote-wrapper .note-editor .btn-group.note-fontname > .btn-group:last-child > .btn,
+.summernote-wrapper .note-editor .btn-group.note-fontsize > .btn-group:last-child > .btn,
+.summernote-wrapper .note-editor .btn-group.note-table > .btn-group:last-child > .btn,
+.summernote-wrapper .note-editor .btn-group.note-current-color-button > .btn-group:last-child > .btn {
+  border-radius: 3px;
+}
+
+.summernote-wrapper .note-editor .btn-group.note-color > .btn-group:last-child > .btn.note-current-color-button{
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.summernote-wrapper .note-editor .btn-group.note-color > .btn-group:last-child > .btn.dropdown-toggle {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
 
 .picture-vovo-center{
   text-align: center;
@@ -9,3 +32,4 @@
 #modalPopUp footer{
   display: none;
 }
+
