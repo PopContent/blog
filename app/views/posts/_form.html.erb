@@ -10,9 +10,9 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+
   </div>
   <div class="field">
     <%= f.label :title %><br>
@@ -28,5 +28,17 @@
   </div>
   <div class="actions">
     <%= f.submit %>
+  </div>
+
+
+  <div class="form-group">
+      <%= f.label :content, class: 'control-label' %>
+      <button id="blog-edit" class="btn btn-xs btn-default" type="button"><i class="fa fa-pencil m-r-sm"></i>Editar</button>
+      <button id="blog-preview" class="btn btn-xs btn-default" type="button"><i class="fa fa-eye m-r-sm"></i>Visualizar</button>
+
+      <%= f.hidden_field :content %>
+      <div class=" summernote-wrapper">
+          <div id="post-content-editor" class="summernote"></div>
+      </div>
   </div>
 <% end %>
