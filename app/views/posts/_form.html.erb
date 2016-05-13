@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container margin-bottom40">
   <%= form_for(@post) do |f| %>
     <% if @post.errors.any? %>
       <div id="error_explanation">
@@ -11,20 +11,18 @@
       </div>
     <% end %>
 
-    <%= current_user.name %>
     <div class="form-group">
       <%= f.label :title %><br>
       <%= f.text_field :title, class: 'form-control' %>
     </div>
     <div class="form-group">
       <%= f.label :author %><br>
-      <%= f.text_field :author, class: 'form-control' %>
+      <%= f.text_field :author, value: params[:action] == 'new' ? current_user.name : @post.author, class: 'form-control' %>
     </div>
     <div class="form-group">
       <%= f.label :image %><br>
       <%= f.text_field :image, class: 'form-control' %>
     </div>
-
 
     <div class="form-group">
         <%= f.label :content, class: 'control-label' %>
@@ -39,6 +37,6 @@
     <div class="actions">
       <%= f.submit class: 'btn btn-custom right' %>
     </div>
-    <%= link_to 'Back', posts_path, class: 'btn btn-custom right margin-right10'  %>
+    <%= link_to 'Voltar', posts_path, class: 'btn btn-custom right margin-right10'  %>
   <% end %>
 </div>
