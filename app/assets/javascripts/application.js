@@ -2032,7 +2032,7 @@ if (jQuery(".btn-print").length>0) {
                 success: function(message) {
                   $name.removeAttr('disabled');
                   $email.removeAttr('disabled');
-
+                  $('.modal').modal('hide');
                   swal({
                       title: "Obrigado!",
                       text: message,
@@ -2040,6 +2040,7 @@ if (jQuery(".btn-print").length>0) {
                   });
                 },
                 error: function(message) {
+                  $('.modal').modal('hide');
                   swal({
                       title: "Oh não!",
                       text: message.responseText,
@@ -2081,7 +2082,7 @@ if (jQuery(".btn-print").length>0) {
                 dataType: 'html',
                 success: function(message) {
                   $email.removeAttr('disabled');
-
+                  $('.modal').modal('hide');
                   swal({
                       title: "Obrigado!",
                       text: message,
@@ -2089,6 +2090,7 @@ if (jQuery(".btn-print").length>0) {
                   });
                 },
                 error: function(message) {
+                  $('.modal').modal('hide');
                   swal({
                       title: "Oh não!",
                       text: message.responseText,

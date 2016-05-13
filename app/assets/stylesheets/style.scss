@@ -2057,22 +2057,74 @@ ul.pagination li.active a,
 .form-subscribe .error:-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: #d86c6c;
 }
-
 .subscribe-box {
     text-align: center;
     margin-top: 25px;
 }
 
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
+#modal-signup.modal .modal-dialog {
+  min-width: 355px;
 }
-
+@media (min-width: 768px) {
+  #modal-signup.modal .modal-dialog {
+    width: 37%;
+  }
+}
+@media (max-width: 767px) {
+  #modal-signup.modal .modal-dialog {
+    width: 70%;
+    margin: auto;
+  }
+}
+#modal-signup .modal-header{
+  padding: 25px 25px 30px 37px;
+}
+#modal-signup .modal-header .close {
+  margin: -13px -5px 0px 0px;
+  font-size: 30px;
+}
+#modal-signup .modal-header .close:focus {
+  outline: none;
+}
+#modal-signup .modal-header .fa{
+  color: #ff8000;
+  margin-right: 5px;
+  font-size: 20px;
+}
+#modal-signup .modal-header h4{
+  color: #202020;
+  text-transform:uppercase;
+  font-weight: 700;
+  letter-spacing: .5px;
+  line-height: 26px;
+  font-size: 20px;
+}
+#modal-signup .modal-body {
+  overflow: hidden;
+  background-color: #F6F8F9;
+  padding: 35px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+#modal-signup .modal-body input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+#modal-signup .modal-body input[type="submit"] {
+  text-align: center;
+  margin-bottom: 8px;
+}
+#modal-signup .text-desc {
+  line-height: 18px;
+  text-align: right;
+  margin-top: 0px;
+}
+#modal-signup .text-desc a{
+  color: #a9a9a9;
+  font-size: 13px;
+  color: #a9a9a9;
+  font-weight: 400;
+}
 .field_with_errors {
   @extend .has-error;
 }
@@ -2093,3 +2145,15 @@ ul.pagination li.active a,
 .social-links.animated-effect-1 li a:hover {
   border:1px solid rgba(0, 0, 0, 0);
 }
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+
