@@ -26,7 +26,8 @@ class LeadsController < ApplicationController
     @lead = Lead.find(params[:id])
     @lead.destroy
     respond_to do |format|
-      format.html { redirect_to leads_url, notice: 'Lead was successfully destroyed.' }
+      flash[:success] = 'Lead foi excluído com sucesso.'
+      format.html { redirect_to leads_url}
       format.json { head :no_content }
     end
   end
