@@ -1633,3 +1633,10 @@ button.close:hover {
 .field_with_errors {
   @extend .has-error;
 }
+
+@media (min-width: 768px) {
+  .modal-dialog {
+      width: 600px;
+      margin: 80px auto;
+  }
+}

@@ -25,24 +25,6 @@
     </article>
 </div>
 
-<%= link_to('#', data: {target: '#modalPopUp', toggle: 'modal'}) do %>
+<%= link_to('#', data: {target: '#modal-e-book', toggle: 'modal'}) do %>
   <%= image_tag('/assets/low_banner.png') %>
 <%end%>
-
-<div class="modal fade" tabindex="-1" role="dialog" id='modalPopUp'>
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-body" style="background-color:#488ABF; padding:20px; color:#fff; font-family: Source Sans Pro, Arial, Helvetica, sans-serif">
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <img src="http://arianapaz.com.br/popcontent/pop-content-ebook-mini.png" style="float:right;"/>
-        <h2>Você já ouviu falar de técnicas de marketing, mas não tem ideia de como elas funcionam?</h2>
-        <p>O nosso eBook foi feito pensando em você. Com um texto simplificado, dicas práticas para descomplicar o marketing e ajudar a aumentar suas vendas.</p>
-        <form method="post" action="#" id="form-subscribe" class="form-group form-subscribe">
-            <input type="text" name="lead[email]" id="lead_email" placeholder="E-mail *" />
-            <input type="submit" name="submit" value="Quero consultoria">
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
