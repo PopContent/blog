@@ -1,44 +1,44 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-      <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
-  <div class="field">
-
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-
-
-  <div class="form-group">
-      <%= f.label :content, class: 'control-label' %>
-      <button id="blog-edit" class="btn btn-xs btn-default" type="button"><i class="fa fa-pencil m-r-sm"></i>Editar</button>
-      <button id="blog-preview" class="btn btn-xs btn-default" type="button"><i class="fa fa-eye m-r-sm"></i>Visualizar</button>
-
-      <%= f.hidden_field :content %>
-      <div class=" summernote-wrapper">
-          <div id="post-content-editor" class="summernote"></div>
+<div class="container">
+  <%= form_for(@post) do |f| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+        <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
       </div>
-  </div>
-<% end %>
+    <% end %>
+
+    <%= current_user.name %>
+    <div class="form-group">
+      <%= f.label :title %><br>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :author %><br>
+      <%= f.text_field :author, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :image %><br>
+      <%= f.text_field :image, class: 'form-control' %>
+    </div>
+
+
+    <div class="form-group">
+        <%= f.label :content, class: 'control-label' %>
+        <button id="blog-edit" class="btn btn-xs btn-default" type="button"><i class="fa fa-pencil m-r-sm"></i>Editar</button>
+        <button id="blog-preview" class="btn btn-xs btn-default" type="button"><i class="fa fa-eye m-r-sm"></i>Visualizar</button>
+
+        <%= f.hidden_field :content %>
+        <div class=" summernote-wrapper">
+            <div id="post-content-editor" class="summernote"></div>
+        </div>
+    </div>
+    <div class="actions">
+      <%= f.submit class: 'btn btn-custom right' %>
+    </div>
+    <%= link_to 'Back', posts_path, class: 'btn btn-custom right margin-right10'  %>
+  <% end %>
+</div>

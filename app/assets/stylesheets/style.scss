@@ -134,6 +134,15 @@ video {
 .margin-bottom70 { margin-bottom:70px !important; }
 .margin-bottom80 { margin-bottom:80px !important; }
 
+.margin-right10 { margin-right:10px !important; }
+.margin-right20 { margin-right:20px !important; }
+.margin-right30 { margin-right:30px !important; }
+.margin-right40 { margin-right:40px !important; }
+.margin-right50 { margin-right:50px !important; }
+.margin-right60 { margin-right:60px !important; }
+.margin-right70 { margin-right:70px !important; }
+.margin-right80 { margin-right:80px !important; }
+
 .list-icon { margin:20px 0px; }
   .list-icon ul {
     padding:0px;
@@ -244,7 +253,6 @@ input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"
   font-family:Roboto, Arial, sans-serif;
   color:#FFF !important;
   font-size:16px;
-  line-height:50px;
   text-align:left;
   font-weight:400;
   white-space:nowrap;
@@ -263,11 +271,6 @@ input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"
   border-radius:3px;
   -webkit-transition:none;
   transition:none;
-}
-input[type="button"], input[type="submit"], input[type="reset"], button {
-  line-height:1;
-  padding-top:16px;
-  padding-bottom:16px;
 }
 .btn-custom.btn-blue, input[type="button"].btn-blue, input[type="submit"].btn-blue, input[type="reset"].btn-blue, button.btn-blue {
   background-color:#3ebcfa;

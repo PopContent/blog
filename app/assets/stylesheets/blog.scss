@@ -2114,42 +2114,6 @@ h5 + .separator {
   transition: all 0.2s ease-in-out;
 }
 /*Default Button*/
-.btn-default {
-  color: inherit;
-  background-color: #09afdf;
-  border-color: #0c9ec7;
-}
-.btn-default:hover,
-.btn-default:focus,
-.btn-default.focus,
-.btn-default:active,
-.btn-default.active,
-.open > .dropdown-toggle.btn-default {
-  color: #ffffff;
-  background-color: #0c9ec7;
-  border-color: #0c9ec7;
-}
-.btn-default.disabled,
-.btn-default[disabled],
-fieldset[disabled] .btn-default {
-  background-color: #09afdf;
-  border-color: #0c9ec7;
-}
-.btn-default-transparent {
-  color: #777777;
-  background-color: transparent;
-  border-color: #09afdf;
-}
-.btn-default-transparent:hover,
-.btn-default-transparent:focus,
-.btn-default-transparent.focus,
-.btn-default-transparent:active,
-.btn-default-transparent.active,
-.open > .dropdown-toggle.btn-default-transparent {
-  color: #ffffff;
-  background-color: #0c9ec7;
-  border-color: #0781a4;
-}
 .dark-bg .btn-default-transparent {
   color: #ffffff;
 }
@@ -2352,13 +2316,7 @@ fieldset[disabled] .btn-default {
   border-color: #000000;
 }
 /*Buttons Sizes*/
-.btn {
-  padding: 7px 20px;
-  font-size: 14px;
-  line-height: 1.46666667;
-  border-radius: 3px;
-  margin: 10px 0;
-}
+
 .btn-sm {
   padding: 5px 15px;
   font-size: 12px;
@@ -7678,3 +7636,9 @@ h6.media-heading {
   color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: none;
+}
