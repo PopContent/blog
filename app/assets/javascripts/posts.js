@@ -30,4 +30,5 @@ $(document).ready(function(){
         $('#post_content').val(aHTML);
         $('#post-content-editor').summernote('destroy');
     });
+
 });

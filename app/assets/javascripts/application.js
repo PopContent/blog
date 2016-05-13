@@ -30,6 +30,7 @@
 //= require modernizr.js
 //= require summernote/summernote.min.js
 //= require summernote/summernote-pt-BR.js
+//= require datatables.min.js
 //= require google_analytics.coffee
 
 

@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
+<h1 class="textcenter margin-top40">Posts</h1>
 
-<h1>Listing Posts</h1>
-
-<table>
+<div class="container margin-bottom40">
+<%= render 'shared/error_messages' %>
+<table id="posts-table" class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -18,14 +18,14 @@
         <td><%= post.title %></td>
         <td><%= post.author %></td>
         <td><%= post.image %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', post %></td>
+        <td><%= link_to 'Editar', edit_post_path(post) %></td>
+        <td><%= link_to 'Excluir', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<%= link_to 'Criar um Post', new_post_path, class: 'btn btn-custom right'%>
 
-<br>
+</div>
 
-<%= link_to 'New Post', new_post_path %>

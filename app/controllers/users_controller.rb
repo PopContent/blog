@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        flash[:danger] = "Usuario criado ${@user.name} com sucesso"
+        flash[:success] = "Usuario criado #{@user.name} com sucesso"
         format.html { redirect_to users_path }
         format.json { render :show, status: :created, location: @user }
       else
@@ -45,7 +45,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        flash[:success] = "Edição realizada com sucesso"
+        format.html { redirect_to @user }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -59,6 +60,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
+      flash[:warning] = "Usuario #{@user.name} foi excluído."
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end

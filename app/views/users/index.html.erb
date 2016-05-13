@@ -1,10 +1,8 @@
-<p id="notice"><%= notice %></p>
+<h1 class="textcenter margin-top40">Usuários</h1>
 
-<h1 class="textcenter">Usuários</h1>
-
-<div class="container">
+<div class="container margin-bottom40">
 <%= render 'shared/error_messages' %>
-<table>
+<table id="users-table" class="table">
   <thead>
     <tr>
       <th>Name</th>
@@ -24,7 +22,8 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to 'Novo Usuário', new_user_path, class: 'btn btn-custom right'%>
+
 </div>
 
 
-<%= link_to 'New User', new_user_path %>
