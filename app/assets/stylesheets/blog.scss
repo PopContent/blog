@@ -2837,53 +2837,6 @@ h5 + .separator {
     font-size: 15px;
   }
 }
-/* Pager
----------------------------------- */
-ul.pagination,
-ul.pager {
-  margin: 20px 0 40px;
-  text-align: left;
-}
-ul.pagination li {
-  padding: 0;
-  margin: 0 5px 0 0;
-  border-bottom: none;
-  display: inline-block;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-}
-ul.pagination li > a,
-.pagination > li:first-child > a,
-.pagination > li:last-child > a,
-ul.pager li > a {
-  text-align: center;
-  padding: 0;
-  height: 40px;
-  width: 40px;
-  border: 1px solid #777777;
-  line-height: 39px;
-  background-color: #777777;
-  color: #ffffff;
-  display: inline-block;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  border-radius: 100%;
-}
-ul.pagination li > a:hover,
-ul.pagination li > a:focus {
-  background-color: transparent;
-  color: #ffffff;
-  background-color: #0c9ec7;
-  border-color: #0c9ec7;
-}
-ul.pagination li.active a,
-.pagination > .active > a:hover,
-.pagination > .active > a:focus {
-  color: #ffffff;
-  background-color: #09afdf;
-  border-color: #09afdf;
-}
 /* Breadcrumb
 ---------------------------------- */
 .breadcrumb-container {

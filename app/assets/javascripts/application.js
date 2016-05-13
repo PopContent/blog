@@ -2114,3 +2114,16 @@ $(function() {
 });
 
 })(window.jQuery);
+
+var dataTableLanguage = {
+    'loading': 'Carregando...',
+    'emptyTable': 'Não há dados a serem exibidos',
+    'info': 'Mostrando de _START_ até _END_ de _TOTAL_ resultados',
+    'infoEmpty': 'Sem dados para mostrar',
+    'infoFiltered': ' (filtrado de _MAX_ resultados)',
+    'processing': 'processando...',
+    'search': 'Pesquisar',
+    'zeroRecords': 'Nenhum registro encontrado',
+    'decimal': ',',
+    'thousands': '.'
+}

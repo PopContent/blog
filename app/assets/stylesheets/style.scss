@@ -166,7 +166,7 @@ video {
 
 .required { color:#f63737; }
 
-input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], .ie input[type="range"], .ie9 input[type="range"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], .ie input[type="range"], .ie9 input[type="range"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
   height:50px;
   font-family:Roboto, Arial, sans-serif;
   color:#b0b0b0;
@@ -176,7 +176,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
   outline:none !important;
   border-radius:3px;
 }
-.ie input[type="color"], .ie input[type="date"], .ie input[type="datetime"], .ie input[type="datetime-local"], .ie input[type="email"], .ie input[type="month"], .ie input[type="number"], .ie input[type="password"], .ie input[type="range"], .ie input[type="search"], .ie input[type="tel"], .ie input[type="text"], .ie input[type="time"], .ie input[type="url"], .ie input[type="week"] { line-height:48px; }
+.ie input[type="color"], .ie input[type="date"], .ie input[type="datetime"], .ie input[type="datetime-local"], .ie input[type="email"], .ie input[type="month"], .ie input[type="number"], .ie input[type="password"], .ie input[type="range"], .ie input[type="tel"], .ie input[type="text"], .ie input[type="time"], .ie input[type="url"], .ie input[type="week"] { line-height:48px; }
 input[type="color"]::-webkit-color-swatch-wrapper { padding:0px; }
 input[type="color"]::-webkit-color-swatch { border:0px; }
 @-moz-document url-prefix() {
@@ -1974,7 +1974,34 @@ button.close:hover {
 .social-links .dropdown-menu li a:hover i {
   color: #ffffff;
 }
-
+/* Pager
+---------------------------------- */
+ul.pagination li > a,
+.pagination > li:first-child > a,
+.pagination > li:last-child > a,
+ul.pager li > a {
+  text-align: center;
+  border: 1px solid #FF8000;
+  background-color: #FFF;
+  color: inherit;
+  display: inline-block;
+}
+ul.pagination li > a:hover,
+ul.pagination li > a:focus {
+  background-color: transparent;
+  color: #ffffff;
+  background-color: #FF8000;
+  border-color: #FF8000;
+  outline: none;
+}
+ul.pagination li.active a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus {
+  color: #ffffff;
+  background-color: #FF8000;
+  border-color: #FF8000;
+  outline: none;
+}
 
 @media (min-width: 992px) {
 
@@ -2048,6 +2075,9 @@ button.close:hover {
 
 .field_with_errors {
   @extend .has-error;
+}
+.form-control:focus {
+  border-color: #ff8000;
 }
 
 @media (min-width: 768px) {
