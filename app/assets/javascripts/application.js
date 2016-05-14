@@ -2012,6 +2012,11 @@ if (jQuery(".btn-print").length>0) {
             PopContent.removeWarnings(this);
         });
 
+        $('#form-subscribe-modal input[type="text"], #form-subscribe input[type="email"]')
+        .on('focus keypress', function() {
+            PopContent.removeWarnings(this);
+        });
+
         // Signup form when submit button clicked
         $('#form-signup').submit(function() {
             var $form   = $(this);
@@ -2120,6 +2125,55 @@ if (jQuery(".btn-print").length>0) {
 
         // Subscribe form when submit button clicked
         $('#form-subscribe').submit(function() {
+            var $form   = $(this);
+            var submitData  = $form.serialize();
+            var $email    = $form.find('input[name="lead[email]"]');
+            var $submit   = $form.find('input[name="submit"]');
+            var status    = true;
+            if ($email.val() === '' || pattern.test($email.val()) === false) {
+              $email.addClass('error');
+              status = false;
+            }
+
+            if (status) {
+              $email.attr('disabled', 'disabled');
+              $submit.attr('disabled', 'disabled');
+
+              $.ajax({
+                type: 'POST',
+                url: '/leads',
+                data: submitData,
+                dataType: 'html',
+                success: function(message) {
+                  $email.removeAttr('disabled');
+                  $('.modal').modal('hide');
+                  swal({
+                      title: "Obrigado!",
+                      text: message,
+                      type: "success"
+                  });
+                },
+                error: function(message) {
+                  $('.modal').modal('hide');
+                  swal({
+                      title: "Oh não!",
+                      text: message.responseText,
+                      type: "error"
+                  });
+                }
+              }).always(function() {
+                    $email.prop('disabled', false);
+                    $submit.prop('disabled', false);
+              });
+            }
+
+            status = true;
+
+            return false;
+        });
+
+        // Subscribe form when submit button clicked
+        $('#form-subscribe-modal').submit(function() {
             var $form   = $(this);
             var submitData  = $form.serialize();
             var $email    = $form.find('input[name="lead[email]"]');
