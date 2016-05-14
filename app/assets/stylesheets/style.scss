@@ -989,8 +989,8 @@ button.close:hover {
         height:90px;
         margin-bottom:15px;
       }
-      #header-content .header-form-wrapper .header-form input[type="text"].error, #header-content .header-form-wrapper .header-form input[type="email"].error, #header-content .header-form-wrapper .header-form textarea.error { border-color:#d43d3d; }
-      #header-content .header-form-wrapper .header-form input[type="submit"] {
+      input[type="text"].error, #header-content .header-form-wrapper .header-form input[type="email"].error, #header-content .header-form-wrapper .header-form textarea.error { border-color:#d43d3d; }
+      input[type="submit"] {
         width:100%;
         text-align:center;
         margin-top:7px;
@@ -2043,18 +2043,18 @@ ul.pagination li.active a,
   background-size: cover;
 }
 
-.form-subscribe .error::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+.error::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: #d86c6c;
 }
-.form-subscribe .error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+.error:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
    color: #d86c6c;
    opacity: 1;
 }
-.form-subscribe .error::-moz-placeholder { /* Mozilla Firefox 19+ */
+.error::-moz-placeholder { /* Mozilla Firefox 19+ */
    color: #d86c6c;
    opacity: 1;
 }
-.form-subscribe .error:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.error:-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: #d86c6c;
 }
 .subscribe-box {
