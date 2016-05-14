@@ -20,6 +20,10 @@
       <%= f.text_field :author, value: params[:action] == 'new' ? current_user.name : @post.author, class: 'form-control' %>
     </div>
     <div class="form-group">
+      <%= f.label :description %><br>
+      <%= f.text_area :description, class: 'form-control' %>
+    </div>
+    <div class="form-group">
       <%= f.label :image %><br>
       <%= f.text_field :image, class: 'form-control' %>
     </div>

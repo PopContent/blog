@@ -1,5 +1,5 @@
 <% content_for :google_meta do %>
-  <meta name="description" content="<%= truncate_html(@post.content, length: 300, separator: ' ', omission: '...') %>" />
+  <meta name="description" content="<%= @post.description %>" />
   <meta name="keywords" content="market, redes, sociais, publico, alvo, digital,
   empreendedor, empreendedorismo, Whatsapp, inbound, vendas, internet, marketing, lojas,
   aumentar, consultoria, digital, ebook, ecommerce, empresa, inovação, interação, marketing,
@@ -14,7 +14,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="<%= "http://popcontent.blog.br" + post_path(@post) %>" />
   <meta property="og:image" content="<%= "http://popcontent.blog.br/assets/content/blog/" + @post.image %>" />
-  <meta property="og:description" content="<%= truncate_html(@post.content, length: 300, separator: ' ', omission: '...') %>" />
+  <meta property="og:description" content="<%= @post.description %>" />
 <% end %>
 
 <div class="container margin-top50">

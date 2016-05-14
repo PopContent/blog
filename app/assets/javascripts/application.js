@@ -2001,7 +2001,18 @@ if (jQuery(".btn-print").length>0) {
             PopContent.removeWarnings(this);
         });
 
+        // Checking form input when focus and keypress event
+        $('#form-signup-modal input[type="text"], #form-signup input[type="email"], #form-signup select')
+        .on('focus keypress', function() {
+            PopContent.removeWarnings(this);
+        });
+
         $('#form-subscribe input[type="text"], #form-subscribe input[type="email"]')
+        .on('focus keypress', function() {
+            PopContent.removeWarnings(this);
+        });
+
+        $('#form-subscribe-modal input[type="text"], #form-subscribe input[type="email"]')
         .on('focus keypress', function() {
             PopContent.removeWarnings(this);
         });
@@ -2059,8 +2070,110 @@ if (jQuery(".btn-print").length>0) {
             return false;
         });
 
+        // Signup form when submit button clicked
+        $('#form-signup-modal').submit(function() {
+            var $form   = $(this);
+            var submitData  = $form.serialize();
+            var $name   = $form.find('input[name="lead[name]"]');
+            var $email    = $form.find('input[name="lead[email]"]');
+            var $submit   = $form.find('input[name="submit"]');
+            var status    = true;
+            if ($email.val() === '' || pattern.test($email.val()) === false) {
+              $email.addClass('error');
+              status = false;
+            }
+
+            if (status) {
+              $name.attr('disabled', 'disabled');
+              $email.attr('disabled', 'disabled');
+              $submit.attr('disabled', 'disabled');
+
+              $.ajax({
+                type: 'POST',
+                url: '/leads',
+                data: submitData,
+                dataType: 'html',
+                success: function(message) {
+                  $name.removeAttr('disabled');
+                  $email.removeAttr('disabled');
+                  $('.modal').modal('hide');
+                  swal({
+                      title: "Obrigado!",
+                      text: message,
+                      type: "success"
+                  });
+                },
+                error: function(message) {
+                  $('.modal').modal('hide');
+                  swal({
+                      title: "Oh não!",
+                      text: message.responseText,
+                      type: "error"
+                  });
+                }
+              }).always(function() {
+                    $name.prop('disabled', false);
+                    $email.prop('disabled', false);
+                    $submit.prop('disabled', false);
+              });
+            }
+
+            status = true;
+
+            return false;
+        });
+
         // Subscribe form when submit button clicked
         $('#form-subscribe').submit(function() {
+            var $form   = $(this);
+            var submitData  = $form.serialize();
+            var $email    = $form.find('input[name="lead[email]"]');
+            var $submit   = $form.find('input[name="submit"]');
+            var status    = true;
+            if ($email.val() === '' || pattern.test($email.val()) === false) {
+              $email.addClass('error');
+              status = false;
+            }
+
+            if (status) {
+              $email.attr('disabled', 'disabled');
+              $submit.attr('disabled', 'disabled');
+
+              $.ajax({
+                type: 'POST',
+                url: '/leads',
+                data: submitData,
+                dataType: 'html',
+                success: function(message) {
+                  $email.removeAttr('disabled');
+                  $('.modal').modal('hide');
+                  swal({
+                      title: "Obrigado!",
+                      text: message,
+                      type: "success"
+                  });
+                },
+                error: function(message) {
+                  $('.modal').modal('hide');
+                  swal({
+                      title: "Oh não!",
+                      text: message.responseText,
+                      type: "error"
+                  });
+                }
+              }).always(function() {
+                    $email.prop('disabled', false);
+                    $submit.prop('disabled', false);
+              });
+            }
+
+            status = true;
+
+            return false;
+        });
+
+        // Subscribe form when submit button clicked
+        $('#form-subscribe-modal').submit(function() {
             var $form   = $(this);
             var submitData  = $form.serialize();
             var $email    = $form.find('input[name="lead[email]"]');
