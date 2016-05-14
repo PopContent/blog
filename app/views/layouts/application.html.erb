@@ -4,16 +4,24 @@
 <head>
   <title><%= full_title(yield(:title)) %></title>
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+  <!-- Google -->
   <meta name="description" content="PopContent Marketing Digital" />
   <meta name="keywords" content="market, redes, sociais, publico, alvo, digital,
   empreendedor, empreendedorismo, Whatsapp, inbound, vendas, internet, marketing, lojas,
   aumentar, consultoria, digital, ebook, ecommerce, empresa, inovação, interação, marketing,
   popcontent, sucesso, tecnologia, transformar, vendas, visibilidade" />
   <meta name="author" content="Popcontent" />
+  <meta name="application-name" content="Popcontent" />
+
+  <!-- Facebook -->
+  <%= content_for?(:open_graph) ? yield(:open_graph) : '' %>
+
+  <!-- for Twitter -->
+  <%= content_for?(:twitter) ? yield(:twitter) : '' %>
 
   <!-- Mobile Specific Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
