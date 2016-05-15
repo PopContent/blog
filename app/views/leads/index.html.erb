@@ -19,7 +19,7 @@
           <td><%= lead.id %></td>
           <td><%= lead.name %></td>
           <td><%= lead.email %></td>
-          <td><%= I18n.l(lead.created_at, format: "%d/%m/%Y - %H:%M:%S") %></td>
+          <td><%= I18n.l(lead.created_at.localtime, format: "%d/%m/%Y - %H:%M:%S") %></td>
           <td><%= link_to 'Excluir', lead, method: :delete, data: { confirm: 'Tem certeza disso?' } %></td>
         </tr>
       <% end %>
