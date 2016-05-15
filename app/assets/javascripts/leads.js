@@ -3,10 +3,16 @@ $(document).ready(function() {
     language: dataTableLanguage,
     dom: '<"top"lBf>rt<"bottom"ip><"clear">',
     buttons: [
-        'copyHtml5',
-        'excelHtml5',
-        'csvHtml5',
-        'pdfHtml5'
-    ]
+      'copyHtml5',
+      'csvHtml5',
+      'pdfHtml5',
+      {
+          extend: 'excelHtml5',
+          filename: 'Leads',
+          exportOptions: {
+              columns: [ 0, 1, 2, 3 ]
+          }
+      }
+    ],
   });
 } );
