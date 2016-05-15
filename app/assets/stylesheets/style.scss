@@ -989,7 +989,7 @@ button.close:hover {
         margin-bottom:15px;
       }
       input[type="text"].error, #header-content .header-form-wrapper .header-form input[type="email"].error, #header-content .header-form-wrapper .header-form textarea.error { border-color:#d43d3d; }
-      input[type="submit"] {
+      .header-form input[type="submit"] {
         width:100%;
         text-align:center;
         margin-top:7px;
